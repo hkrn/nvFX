@@ -86,7 +86,7 @@
 #endif
 // SHADERCONCAT_USE is a needed simplification to make ES2 work. This flag will be set when targetting ES2. But can work on regular OGL, too
 // Note that D3D needs this because there is no Shader object
-//#define SHADERCONCAT_USE
+#define SHADERCONCAT_USE
 //#define USE_OLDPROGRAM
 
 #ifndef LOGD
