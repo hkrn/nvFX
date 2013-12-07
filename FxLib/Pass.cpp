@@ -706,8 +706,8 @@ Pass::~Pass()
 
         if (NULL!=sl.program)
         {
-          delete_Program(sl.program);
           sl.program->releaseTarget(this, iPM->first);
+          delete_Program(sl.program);
           sl.program = NULL;
           pShdRep->releaseProgram(sl.program);
         }

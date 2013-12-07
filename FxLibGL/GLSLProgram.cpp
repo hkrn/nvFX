@@ -625,7 +625,7 @@ bool GLSLProgram::link(IContainer* pContainer)
             glGetInfoLogARB(m_fragShader, 1024, &len, buf);
 #endif
             if(len)
-                nvFX::printf("Log for Shader: \n%s\n", buf);
+                nvFX::printf("Log for Shader: %s\n%s", buf, *(progString + 1));
 #if 1 //def OGLES2
             glAttachShader(m_program, m_fragShader);
 #else

@@ -385,13 +385,15 @@ bool ResourceGL::createRenderResource()
             target = GL_TEXTURE_2D_MULTISAMPLE;
             glBindTexture( target, m_OGLId);
             // Oh my god !!!!! WTF, OpenGL !?!!??!!
+            glTexImage2DMultisample(target, m_creationData.msaa[0], format, width, height, GL_TRUE/*fixedsamplelocations*/);
+            /*
             glTexParameteri(target, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
             glTexParameteri(target, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
             glTexParameteri(target, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
             glTexParameteri(target, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-
-            glTexImage2DMultisample(target, m_creationData.msaa[0], format, width, height, GL_TRUE/*fixedsamplelocations*/);
+            */
             glBindTexture( target, 0);
+            m_type = RESTEX_2D_MULTISAMPLE;
         } else
 #endif
         {
@@ -723,6 +725,7 @@ bool FrameBufferObject::validate()
             {
             case RESTEX_1D:
             case RESTEX_2D:
+            case RESTEX_2D_MULTISAMPLE:
             case RESTEX_2DRECT:
             //case RESTEX_3D:
             //case RESTEX_CUBE:
@@ -737,10 +740,12 @@ bool FrameBufferObject::validate()
                 }
                 // There is a bug preventing the creation of the FBO if filtering is not NEAREST
                 GLenum target = getGLTarget(pResource->m_type);
+                if (target != GL_TEXTURE_2D_MULTISAMPLE) {
                 glBindTexture( target, pResource->m_OGLId);
                 glTexParameteri(target, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
                 glTexParameteri(target, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
                 glBindTexture( target, 0);
+                }
                 glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0 + i, target, pResource->m_OGLId, 0);
             }
             break;
