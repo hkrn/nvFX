@@ -27,10 +27,10 @@
 */
 #ifndef __FX_H__
 #define __FX_H__
+#include <stdlib.h> /* for malloc */
 #ifdef MEMORY_LEAKS_CHECK
 	#pragma message("build will Check for Memory Leaks!")
 	#define _CRTDBG_MAP_ALLOC
-	#include <stdlib.h>
 	#include <crtdbg.h>
     inline void* operator new(size_t size, const char *file, int line)
     {

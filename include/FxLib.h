@@ -946,7 +946,7 @@ public:
     /// \name creation methods
     /// @{
     /// \brief pD is a possible device pointer (in D3D). see nvFX::IContainer::setDevice, too
-    static __declspec( dllexport ) IContainer*          create(const char *name = NULL);
+    static  IContainer*          create(const char *name = NULL);
     /// @}
     /// \name destruction methods
     /// @{
