@@ -1170,7 +1170,8 @@ EntryPoint          return ENTRY_POINT;
         incData.fileToClose = fd;
         BEGIN(INITIAL);
     } else {
-        YY_FATAL_ERROR( "failure in including a file" );
+        // YY_FATAL_ERROR( "failure in including a file" );
+        BEGIN(INITIAL);
     }
 }
 <<EOF>> {

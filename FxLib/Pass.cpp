@@ -698,7 +698,6 @@ Pass::~Pass()
         if(sl.programPipeline)
         {
             delete_ProgramPipeline(sl.programPipeline, iPM->first);
-            ++iPM;
         }
 //#endif
         sl.statesForExecution.clear();
@@ -710,8 +709,8 @@ Pass::~Pass()
           delete_Program(sl.program);
           sl.program = NULL;
           pShdRep->releaseProgram(sl.program);
-          ++iPM;
         }
+        ++iPM;
     }
 
     if (NULL!=m_pBaseStatesLayer->program)
