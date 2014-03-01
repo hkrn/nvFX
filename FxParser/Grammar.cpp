@@ -1,10 +1,8 @@
+/* A Bison parser, made by GNU Bison 2.7.12-4996.  */
 
-/* A Bison parser, made by GNU Bison 2.4.1.  */
-
-/* Skeleton implementation for Bison's Yacc-like parsers in C
+/* Bison implementation for Yacc-like parsers in C
    
-      Copyright (C) 1984, 1989, 1990, 2000, 2001, 2002, 2003, 2004, 2005, 2006
-   Free Software Foundation, Inc.
+      Copyright (C) 1984, 1989-1990, 2000-2013 Free Software Foundation, Inc.
    
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
@@ -46,7 +44,7 @@
 #define YYBISON 1
 
 /* Bison version.  */
-#define YYBISON_VERSION "2.4.1"
+#define YYBISON_VERSION "2.7.12-4996"
 
 /* Skeleton name.  */
 #define YYSKELETON_NAME "yacc.c"
@@ -60,8 +58,6 @@
 /* Pull parsers.  */
 #define YYPULL 1
 
-/* Using locations.  */
-#define YYLSP_NEEDED 0
 
 /* Substitute the variable and function names.  */
 #define yyparse         FxParserparse
@@ -72,10 +68,8 @@
 #define yydebug         FxParserdebug
 #define yynerrs         FxParsernerrs
 
-
 /* Copy the first part of user declarations.  */
-
-/* Line 189 of yacc.c  */
+/* Line 371 of yacc.c  */
 #line 36 "Grammar.ypp"
 
     /* Documentation on the keywords and grammar created in : ..\doxygen\Keywords.dxt */
@@ -260,14 +254,16 @@
         return 0;
     }
 
+/* Line 371 of yacc.c  */
+#line 259 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
 
-/* Line 189 of yacc.c  */
-#line 266 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-
-/* Enabling traces.  */
-#ifndef YYDEBUG
-# define YYDEBUG 0
-#endif
+# ifndef YY_NULL
+#  if defined __cplusplus && 201103L <= __cplusplus
+#   define YY_NULL nullptr
+#  else
+#   define YY_NULL 0
+#  endif
+# endif
 
 /* Enabling verbose error messages.  */
 #ifdef YYERROR_VERBOSE
@@ -277,14 +273,19 @@
 # define YYERROR_VERBOSE 0
 #endif
 
-/* Enabling the token table.  */
-#ifndef YYTOKEN_TABLE
-# define YYTOKEN_TABLE 0
+/* In a future release of Bison, this section will be replaced
+   by #include "Grammar.hpp".  */
+#ifndef YY_FXPARSER_USERS_HKRN_SRC_MMDAI_NVFX_SRC_FXPARSER_GRAMMAR_HPP_INCLUDED
+# define YY_FXPARSER_USERS_HKRN_SRC_MMDAI_NVFX_SRC_FXPARSER_GRAMMAR_HPP_INCLUDED
+/* Enabling traces.  */
+#ifndef YYDEBUG
+# define YYDEBUG 0
 #endif
-
+#if YYDEBUG
+extern int FxParserdebug;
+#endif
 /* "%code requires" blocks.  */
-
-/* Line 209 of yacc.c  */
+/* Line 387 of yacc.c  */
 #line 220 "Grammar.ypp"
 
     #include  <vector>
@@ -458,9 +459,8 @@
     }
 
 
-
-/* Line 209 of yacc.c  */
-#line 464 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
+/* Line 387 of yacc.c  */
+#line 464 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
 
 /* Tokens.  */
 #ifndef YYTOKENTYPE
@@ -846,12 +846,10 @@
 #endif
 
 
-
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 typedef union YYSTYPE
 {
-
-/* Line 214 of yacc.c  */
+/* Line 387 of yacc.c  */
 #line 422 "Grammar.ypp"
 
     bool            bval;
@@ -889,21 +887,36 @@ typedef union YYSTYPE
     Sglobal_varname global_varname_annots;
 
 
-
-/* Line 214 of yacc.c  */
-#line 895 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
+/* Line 387 of yacc.c  */
+#line 892 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
 #endif
 
+extern YYSTYPE FxParserlval;
+
+#ifdef YYPARSE_PARAM
+#if defined __STDC__ || defined __cplusplus
+int FxParserparse (void *YYPARSE_PARAM);
+#else
+int FxParserparse ();
+#endif
+#else /* ! YYPARSE_PARAM */
+#if defined __STDC__ || defined __cplusplus
+int FxParserparse (void);
+#else
+int FxParserparse ();
+#endif
+#endif /* ! YYPARSE_PARAM */
+
+#endif /* !YY_FXPARSER_USERS_HKRN_SRC_MMDAI_NVFX_SRC_FXPARSER_GRAMMAR_HPP_INCLUDED  */
 
 /* Copy the second part of user declarations.  */
 
-
-/* Line 264 of yacc.c  */
-#line 907 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
+/* Line 390 of yacc.c  */
+#line 920 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
 
 #ifdef short
 # undef short
@@ -953,27 +966,36 @@ typedef short int yytype_int16;
 #define YYSIZE_MAXIMUM ((YYSIZE_T) -1)
 
 #ifndef YY_
-# if YYENABLE_NLS
+# if defined YYENABLE_NLS && YYENABLE_NLS
 #  if ENABLE_NLS
 #   include <libintl.h> /* INFRINGES ON USER NAME SPACE */
-#   define YY_(msgid) dgettext ("bison-runtime", msgid)
+#   define YY_(Msgid) dgettext ("bison-runtime", Msgid)
 #  endif
 # endif
 # ifndef YY_
-#  define YY_(msgid) msgid
+#  define YY_(Msgid) Msgid
+# endif
+#endif
+
+#ifndef __attribute__
+/* This feature is available in gcc versions 2.5 and later.  */
+# if (! defined __GNUC__ || __GNUC__ < 2 \
+      || (__GNUC__ == 2 && __GNUC_MINOR__ < 5))
+#  define __attribute__(Spec) /* empty */
 # endif
 #endif
 
 /* Suppress unused-variable warnings by "using" E.  */
 #if ! defined lint || defined __GNUC__
-# define YYUSE(e) ((void) (e))
+# define YYUSE(E) ((void) (E))
 #else
-# define YYUSE(e) /* empty */
+# define YYUSE(E) /* empty */
 #endif
+
 
 /* Identity function, used to suppress warnings about constant conditions.  */
 #ifndef lint
-# define YYID(n) (n)
+# define YYID(N) (N)
 #else
 #if (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
@@ -1006,11 +1028,12 @@ YYID (yyi)
 #    define alloca _alloca
 #   else
 #    define YYSTACK_ALLOC alloca
-#    if ! defined _ALLOCA_H && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
+#    if ! defined _ALLOCA_H && ! defined EXIT_SUCCESS && (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 #     include <stdlib.h> /* INFRINGES ON USER NAME SPACE */
-#     ifndef _STDLIB_H
-#      define _STDLIB_H 1
+      /* Use EXIT_SUCCESS as a witness for stdlib.h.  */
+#     ifndef EXIT_SUCCESS
+#      define EXIT_SUCCESS 0
 #     endif
 #    endif
 #   endif
@@ -1033,24 +1056,24 @@ YYID (yyi)
 #  ifndef YYSTACK_ALLOC_MAXIMUM
 #   define YYSTACK_ALLOC_MAXIMUM YYSIZE_MAXIMUM
 #  endif
-#  if (defined __cplusplus && ! defined _STDLIB_H \
+#  if (defined __cplusplus && ! defined EXIT_SUCCESS \
        && ! ((defined YYMALLOC || defined malloc) \
 	     && (defined YYFREE || defined free)))
 #   include <stdlib.h> /* INFRINGES ON USER NAME SPACE */
-#   ifndef _STDLIB_H
-#    define _STDLIB_H 1
+#   ifndef EXIT_SUCCESS
+#    define EXIT_SUCCESS 0
 #   endif
 #  endif
 #  ifndef YYMALLOC
 #   define YYMALLOC malloc
-#   if ! defined malloc && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
+#   if ! defined malloc && ! defined EXIT_SUCCESS && (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 void *malloc (YYSIZE_T); /* INFRINGES ON USER NAME SPACE */
 #   endif
 #  endif
 #  ifndef YYFREE
 #   define YYFREE free
-#   if ! defined free && ! defined _STDLIB_H && (defined __STDC__ || defined __C99__FUNC__ \
+#   if ! defined free && ! defined EXIT_SUCCESS && (defined __STDC__ || defined __C99__FUNC__ \
      || defined __cplusplus || defined _MSC_VER)
 void free (void *); /* INFRINGES ON USER NAME SPACE */
 #   endif
@@ -1079,23 +1102,7 @@ union yyalloc
      ((N) * (sizeof (yytype_int16) + sizeof (YYSTYPE)) \
       + YYSTACK_GAP_MAXIMUM)
 
-/* Copy COUNT objects from FROM to TO.  The source and destination do
-   not overlap.  */
-# ifndef YYCOPY
-#  if defined __GNUC__ && 1 < __GNUC__
-#   define YYCOPY(To, From, Count) \
-      __builtin_memcpy (To, From, (Count) * sizeof (*(From)))
-#  else
-#   define YYCOPY(To, From, Count)		\
-      do					\
-	{					\
-	  YYSIZE_T yyi;				\
-	  for (yyi = 0; yyi < (Count); yyi++)	\
-	    (To)[yyi] = (From)[yyi];		\
-	}					\
-      while (YYID (0))
-#  endif
-# endif
+# define YYCOPY_NEEDED 1
 
 /* Relocate STACK from its old location to the new one.  The
    local variables YYSIZE and YYSTACKSIZE give the old and new number of
@@ -1114,6 +1121,26 @@ union yyalloc
     while (YYID (0))
 
 #endif
+
+#if defined YYCOPY_NEEDED && YYCOPY_NEEDED
+/* Copy COUNT objects from SRC to DST.  The source and destination do
+   not overlap.  */
+# ifndef YYCOPY
+#  if defined __GNUC__ && 1 < __GNUC__
+#   define YYCOPY(Dst, Src, Count) \
+      __builtin_memcpy (Dst, Src, (Count) * sizeof (*(Src)))
+#  else
+#   define YYCOPY(Dst, Src, Count)              \
+      do                                        \
+        {                                       \
+          YYSIZE_T yyi;                         \
+          for (yyi = 0; yyi < (Count); yyi++)   \
+            (Dst)[yyi] = (Src)[yyi];            \
+        }                                       \
+      while (YYID (0))
+#  endif
+# endif
+#endif /* !YYCOPY_NEEDED */
 
 /* YYFINAL -- State number of the termination state.  */
 #define YYFINAL  2
@@ -1706,7 +1733,7 @@ static const yytype_uint16 yyrline[] =
 };
 #endif
 
-#if YYDEBUG || YYERROR_VERBOSE || YYTOKEN_TABLE
+#if YYDEBUG || YYERROR_VERBOSE || 0
 /* YYTNAME[SYMBOL-NUM] -- String name of the symbol SYMBOL-NUM.
    First, the terminals, then, starting at YYNTOKENS, nonterminals.  */
 static const char *const yytname[] =
@@ -1835,7 +1862,7 @@ static const char *const yytname[] =
   "optix_context_data", "optix_context", "$@22", "$@23",
   "optix_material_data", "optix_material", "$@24", "$@25",
   "optix_buffer_data", "optix_buffer", "$@26", "$@27",
-  "ptx_program_from_file_data", "ptx_program_from_file", "$@28", "$@29", 0
+  "ptx_program_from_file_data", "ptx_program_from_file", "$@28", "$@29", YY_NULL
 };
 #endif
 
@@ -2047,8 +2074,8 @@ static const yytype_uint8 yyr2[] =
        0,     0,     8,     0,     5,     5,     0,     0,     8
 };
 
-/* YYDEFACT[STATE-NAME] -- Default rule to reduce with in state
-   STATE-NUM when YYTABLE doesn't specify something else to do.  Zero
+/* YYDEFACT[STATE-NAME] -- Default reduction number in state STATE-NUM.
+   Performed when YYTABLE doesn't specify something else to do.  Zero
    means the default is an error.  */
 static const yytype_uint16 yydefact[] =
 {
@@ -2525,8 +2552,7 @@ static const yytype_int16 yypgoto[] =
 
 /* YYTABLE[YYPACT[STATE-NUM]].  What to do in state STATE-NUM.  If
    positive, shift that token.  If negative, reduce the rule which
-   number is the opposite.  If zero, do what YYDEFACT says.
-   If YYTABLE_NINF, syntax error.  */
+   number is the opposite.  If YYTABLE_NINF, syntax error.  */
 #define YYTABLE_NINF -701
 static const yytype_int16 yytable[] =
 {
@@ -3032,6 +3058,12 @@ static const yytype_int16 yytable[] =
      629,   630,   631,   632,   633,   634,   635,   636,   637,   638,
      639,   640,   641,   642,   643,   644,   645
 };
+
+#define yypact_value_is_default(Yystate) \
+  (!!((Yystate) == (-1824)))
+
+#define yytable_value_is_error(Yytable_value) \
+  YYID (0)
 
 static const yytype_int16 yycheck[] =
 {
@@ -3769,78 +3801,50 @@ static const yytype_uint16 yystos[] =
 
 /* Like YYERROR except do call yyerror.  This remains here temporarily
    to ease the transition to the new meaning of YYERROR, for GCC.
-   Once GCC version 2 has supplanted version 1, this can go.  */
+   Once GCC version 2 has supplanted version 1, this can go.  However,
+   YYFAIL appears to be in use.  Nevertheless, it is formally deprecated
+   in Bison 2.4.2's NEWS entry, where a plan to phase it out is
+   discussed.  */
 
 #define YYFAIL		goto yyerrlab
+#if defined YYFAIL
+  /* This is here to suppress warnings from the GCC cpp's
+     -Wunused-macros.  Normally we don't worry about that warning, but
+     some users do, and we want to make it easy for users to remove
+     YYFAIL uses, which will produce warnings from Bison 2.5.  */
+#endif
 
 #define YYRECOVERING()  (!!yyerrstatus)
 
-#define YYBACKUP(Token, Value)					\
-do								\
-  if (yychar == YYEMPTY && yylen == 1)				\
-    {								\
-      yychar = (Token);						\
-      yylval = (Value);						\
-      yytoken = YYTRANSLATE (yychar);				\
-      YYPOPSTACK (1);						\
-      goto yybackup;						\
-    }								\
-  else								\
-    {								\
+#define YYBACKUP(Token, Value)                                  \
+do                                                              \
+  if (yychar == YYEMPTY)                                        \
+    {                                                           \
+      yychar = (Token);                                         \
+      yylval = (Value);                                         \
+      YYPOPSTACK (yylen);                                       \
+      yystate = *yyssp;                                         \
+      goto yybackup;                                            \
+    }                                                           \
+  else                                                          \
+    {                                                           \
       yyerror (YY_("syntax error: cannot back up")); \
       YYERROR;							\
     }								\
 while (YYID (0))
 
-
+/* Error token number */
 #define YYTERROR	1
 #define YYERRCODE	256
 
 
-/* YYLLOC_DEFAULT -- Set CURRENT to span from RHS[1] to RHS[N].
-   If N is 0, then set CURRENT to the empty location which ends
-   the previous symbol: RHS[0] (always defined).  */
-
-#define YYRHSLOC(Rhs, K) ((Rhs)[K])
-#ifndef YYLLOC_DEFAULT
-# define YYLLOC_DEFAULT(Current, Rhs, N)				\
-    do									\
-      if (YYID (N))                                                    \
-	{								\
-	  (Current).first_line   = YYRHSLOC (Rhs, 1).first_line;	\
-	  (Current).first_column = YYRHSLOC (Rhs, 1).first_column;	\
-	  (Current).last_line    = YYRHSLOC (Rhs, N).last_line;		\
-	  (Current).last_column  = YYRHSLOC (Rhs, N).last_column;	\
-	}								\
-      else								\
-	{								\
-	  (Current).first_line   = (Current).last_line   =		\
-	    YYRHSLOC (Rhs, 0).last_line;				\
-	  (Current).first_column = (Current).last_column =		\
-	    YYRHSLOC (Rhs, 0).last_column;				\
-	}								\
-    while (YYID (0))
-#endif
-
-
-/* YY_LOCATION_PRINT -- Print the location on the stream.
-   This macro was not mandated originally: define only if we know
-   we won't break user code: when these are the locations we know.  */
-
+/* This macro is provided for backward compatibility. */
 #ifndef YY_LOCATION_PRINT
-# if YYLTYPE_IS_TRIVIAL
-#  define YY_LOCATION_PRINT(File, Loc)			\
-     fprintf (File, "%d.%d-%d.%d",			\
-	      (Loc).first_line, (Loc).first_column,	\
-	      (Loc).last_line,  (Loc).last_column)
-# else
-#  define YY_LOCATION_PRINT(File, Loc) ((void) 0)
-# endif
+# define YY_LOCATION_PRINT(File, Loc) ((void) 0)
 #endif
 
 
 /* YYLEX -- calling `yylex' with the right arguments.  */
-
 #ifdef YYLEX_PARAM
 # define YYLEX yylex (YYLEX_PARAM)
 #else
@@ -3890,6 +3894,8 @@ yy_symbol_value_print (yyoutput, yytype, yyvaluep)
     YYSTYPE const * const yyvaluep;
 #endif
 {
+  FILE *yyo = yyoutput;
+  YYUSE (yyo);
   if (!yyvaluep)
     return;
 # ifdef YYPRINT
@@ -3898,11 +3904,7 @@ yy_symbol_value_print (yyoutput, yytype, yyvaluep)
 # else
   YYUSE (yyoutput);
 # endif
-  switch (yytype)
-    {
-      default:
-	break;
-    }
+  YYUSE (yytype);
 }
 
 
@@ -4027,7 +4029,6 @@ int yydebug;
 # define YYMAXDEPTH 10000
 #endif
 
-
 
 #if YYERROR_VERBOSE
 
@@ -4130,115 +4131,145 @@ yytnamerr (char *yyres, const char *yystr)
 }
 # endif
 
-/* Copy into YYRESULT an error message about the unexpected token
-   YYCHAR while in state YYSTATE.  Return the number of bytes copied,
-   including the terminating null byte.  If YYRESULT is null, do not
-   copy anything; just return the number of bytes that would be
-   copied.  As a special case, return 0 if an ordinary "syntax error"
-   message will do.  Return YYSIZE_MAXIMUM if overflow occurs during
-   size calculation.  */
-static YYSIZE_T
-yysyntax_error (char *yyresult, int yystate, int yychar)
+/* Copy into *YYMSG, which is of size *YYMSG_ALLOC, an error message
+   about the unexpected token YYTOKEN for the state stack whose top is
+   YYSSP.
+
+   Return 0 if *YYMSG was successfully written.  Return 1 if *YYMSG is
+   not large enough to hold the message.  In that case, also set
+   *YYMSG_ALLOC to the required number of bytes.  Return 2 if the
+   required number of bytes is too large to store.  */
+static int
+yysyntax_error (YYSIZE_T *yymsg_alloc, char **yymsg,
+                yytype_int16 *yyssp, int yytoken)
 {
-  int yyn = yypact[yystate];
+  YYSIZE_T yysize0 = yytnamerr (YY_NULL, yytname[yytoken]);
+  YYSIZE_T yysize = yysize0;
+  enum { YYERROR_VERBOSE_ARGS_MAXIMUM = 5 };
+  /* Internationalized format string. */
+  const char *yyformat = YY_NULL;
+  /* Arguments of yyformat. */
+  char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
+  /* Number of reported tokens (one for the "unexpected", one per
+     "expected"). */
+  int yycount = 0;
 
-  if (! (YYPACT_NINF < yyn && yyn <= YYLAST))
-    return 0;
-  else
+  /* There are many possibilities here to consider:
+     - Assume YYFAIL is not used.  It's too flawed to consider.  See
+       <http://lists.gnu.org/archive/html/bison-patches/2009-12/msg00024.html>
+       for details.  YYERROR is fine as it does not invoke this
+       function.
+     - If this state is a consistent state with a default action, then
+       the only way this function was invoked is if the default action
+       is an error action.  In that case, don't check for expected
+       tokens because there are none.
+     - The only way there can be no lookahead present (in yychar) is if
+       this state is a consistent state with a default action.  Thus,
+       detecting the absence of a lookahead is sufficient to determine
+       that there is no unexpected or expected token to report.  In that
+       case, just report a simple "syntax error".
+     - Don't assume there isn't a lookahead just because this state is a
+       consistent state with a default action.  There might have been a
+       previous inconsistent state, consistent state with a non-default
+       action, or user semantic action that manipulated yychar.
+     - Of course, the expected token list depends on states to have
+       correct lookahead information, and it depends on the parser not
+       to perform extra reductions after fetching a lookahead from the
+       scanner and before detecting a syntax error.  Thus, state merging
+       (from LALR or IELR) and default reductions corrupt the expected
+       token list.  However, the list is correct for canonical LR with
+       one exception: it will still contain any token that will not be
+       accepted due to an error action in a later state.
+  */
+  if (yytoken != YYEMPTY)
     {
-      int yytype = YYTRANSLATE (yychar);
-      YYSIZE_T yysize0 = yytnamerr (0, yytname[yytype]);
-      YYSIZE_T yysize = yysize0;
-      YYSIZE_T yysize1;
-      int yysize_overflow = 0;
-      enum { YYERROR_VERBOSE_ARGS_MAXIMUM = 5 };
-      char const *yyarg[YYERROR_VERBOSE_ARGS_MAXIMUM];
-      int yyx;
+      int yyn = yypact[*yyssp];
+      yyarg[yycount++] = yytname[yytoken];
+      if (!yypact_value_is_default (yyn))
+        {
+          /* Start YYX at -YYN if negative to avoid negative indexes in
+             YYCHECK.  In other words, skip the first -YYN actions for
+             this state because they are default actions.  */
+          int yyxbegin = yyn < 0 ? -yyn : 0;
+          /* Stay within bounds of both yycheck and yytname.  */
+          int yychecklim = YYLAST - yyn + 1;
+          int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;
+          int yyx;
 
-# if 0
-      /* This is so xgettext sees the translatable formats that are
-	 constructed on the fly.  */
-      YY_("syntax error, unexpected %s");
-      YY_("syntax error, unexpected %s, expecting %s");
-      YY_("syntax error, unexpected %s, expecting %s or %s");
-      YY_("syntax error, unexpected %s, expecting %s or %s or %s");
-      YY_("syntax error, unexpected %s, expecting %s or %s or %s or %s");
-# endif
-      char *yyfmt;
-      char const *yyf;
-      static char const yyunexpected[] = "syntax error, unexpected %s";
-      static char const yyexpecting[] = ", expecting %s";
-      static char const yyor[] = " or %s";
-      char yyformat[sizeof yyunexpected
-		    + sizeof yyexpecting - 1
-		    + ((YYERROR_VERBOSE_ARGS_MAXIMUM - 2)
-		       * (sizeof yyor - 1))];
-      char const *yyprefix = yyexpecting;
-
-      /* Start YYX at -YYN if negative to avoid negative indexes in
-	 YYCHECK.  */
-      int yyxbegin = yyn < 0 ? -yyn : 0;
-
-      /* Stay within bounds of both yycheck and yytname.  */
-      int yychecklim = YYLAST - yyn + 1;
-      int yyxend = yychecklim < YYNTOKENS ? yychecklim : YYNTOKENS;
-      int yycount = 1;
-
-      yyarg[0] = yytname[yytype];
-      yyfmt = yystpcpy (yyformat, yyunexpected);
-
-      for (yyx = yyxbegin; yyx < yyxend; ++yyx)
-	if (yycheck[yyx + yyn] == yyx && yyx != YYTERROR)
-	  {
-	    if (yycount == YYERROR_VERBOSE_ARGS_MAXIMUM)
-	      {
-		yycount = 1;
-		yysize = yysize0;
-		yyformat[sizeof yyunexpected - 1] = '\0';
-		break;
-	      }
-	    yyarg[yycount++] = yytname[yyx];
-	    yysize1 = yysize + yytnamerr (0, yytname[yyx]);
-	    yysize_overflow |= (yysize1 < yysize);
-	    yysize = yysize1;
-	    yyfmt = yystpcpy (yyfmt, yyprefix);
-	    yyprefix = yyor;
-	  }
-
-      yyf = YY_(yyformat);
-      yysize1 = yysize + yystrlen (yyf);
-      yysize_overflow |= (yysize1 < yysize);
-      yysize = yysize1;
-
-      if (yysize_overflow)
-	return YYSIZE_MAXIMUM;
-
-      if (yyresult)
-	{
-	  /* Avoid sprintf, as that infringes on the user's name space.
-	     Don't have undefined behavior even if the translation
-	     produced a string with the wrong number of "%s"s.  */
-	  char *yyp = yyresult;
-	  int yyi = 0;
-	  while ((*yyp = *yyf) != '\0')
-	    {
-	      if (*yyp == '%' && yyf[1] == 's' && yyi < yycount)
-		{
-		  yyp += yytnamerr (yyp, yyarg[yyi++]);
-		  yyf += 2;
-		}
-	      else
-		{
-		  yyp++;
-		  yyf++;
-		}
-	    }
-	}
-      return yysize;
+          for (yyx = yyxbegin; yyx < yyxend; ++yyx)
+            if (yycheck[yyx + yyn] == yyx && yyx != YYTERROR
+                && !yytable_value_is_error (yytable[yyx + yyn]))
+              {
+                if (yycount == YYERROR_VERBOSE_ARGS_MAXIMUM)
+                  {
+                    yycount = 1;
+                    yysize = yysize0;
+                    break;
+                  }
+                yyarg[yycount++] = yytname[yyx];
+                {
+                  YYSIZE_T yysize1 = yysize + yytnamerr (YY_NULL, yytname[yyx]);
+                  if (! (yysize <= yysize1
+                         && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
+                    return 2;
+                  yysize = yysize1;
+                }
+              }
+        }
     }
+
+  switch (yycount)
+    {
+# define YYCASE_(N, S)                      \
+      case N:                               \
+        yyformat = S;                       \
+      break
+      YYCASE_(0, YY_("syntax error"));
+      YYCASE_(1, YY_("syntax error, unexpected %s"));
+      YYCASE_(2, YY_("syntax error, unexpected %s, expecting %s"));
+      YYCASE_(3, YY_("syntax error, unexpected %s, expecting %s or %s"));
+      YYCASE_(4, YY_("syntax error, unexpected %s, expecting %s or %s or %s"));
+      YYCASE_(5, YY_("syntax error, unexpected %s, expecting %s or %s or %s or %s"));
+# undef YYCASE_
+    }
+
+  {
+    YYSIZE_T yysize1 = yysize + yystrlen (yyformat);
+    if (! (yysize <= yysize1 && yysize1 <= YYSTACK_ALLOC_MAXIMUM))
+      return 2;
+    yysize = yysize1;
+  }
+
+  if (*yymsg_alloc < yysize)
+    {
+      *yymsg_alloc = 2 * yysize;
+      if (! (yysize <= *yymsg_alloc
+             && *yymsg_alloc <= YYSTACK_ALLOC_MAXIMUM))
+        *yymsg_alloc = YYSTACK_ALLOC_MAXIMUM;
+      return 1;
+    }
+
+  /* Avoid sprintf, as that infringes on the user's name space.
+     Don't have undefined behavior even if the translation
+     produced a string with the wrong number of "%s"s.  */
+  {
+    char *yyp = *yymsg;
+    int yyi = 0;
+    while ((*yyp = *yyformat) != '\0')
+      if (*yyp == '%' && yyformat[1] == 's' && yyi < yycount)
+        {
+          yyp += yytnamerr (yyp, yyarg[yyi++]);
+          yyformat += 2;
+        }
+      else
+        {
+          yyp++;
+          yyformat++;
+        }
+  }
+  return 0;
 }
 #endif /* YYERROR_VERBOSE */
-
 
 /*-----------------------------------------------.
 | Release the memory associated to this symbol.  |
@@ -4265,141 +4296,114 @@ yydestruct (yymsg, yytype, yyvaluep)
 
   switch (yytype)
     {
-      case 407: /* "shaderlist" */
-
-/* Line 1000 of yacc.c  */
+      case 407: /* shaderlist */
+/* Line 1393 of yacc.c  */
 #line 462 "Grammar.ypp"
-	{ if((yyvaluep->shaderList)) delete (yyvaluep->shaderList); };
-
-/* Line 1000 of yacc.c  */
-#line 4276 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 408: /* "one_or_more_shaders" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).shaderList)) delete ((*yyvaluep).shaderList); };
+/* Line 1393 of yacc.c  */
+#line 4305 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 408: /* one_or_more_shaders */
+/* Line 1393 of yacc.c  */
 #line 462 "Grammar.ypp"
-	{ if((yyvaluep->shaderList)) delete (yyvaluep->shaderList); };
-
-/* Line 1000 of yacc.c  */
-#line 4285 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 409: /* "varnamelist" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).shaderList)) delete ((*yyvaluep).shaderList); };
+/* Line 1393 of yacc.c  */
+#line 4312 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 409: /* varnamelist */
+/* Line 1393 of yacc.c  */
 #line 461 "Grammar.ypp"
-	{ if((yyvaluep->varNameList)) delete (yyvaluep->varNameList); };
-
-/* Line 1000 of yacc.c  */
-#line 4294 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 412: /* "fexplist" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).varNameList)) delete ((*yyvaluep).varNameList); };
+/* Line 1393 of yacc.c  */
+#line 4319 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 412: /* fexplist */
+/* Line 1393 of yacc.c  */
 #line 463 "Grammar.ypp"
-	{ if((yyvaluep->floatList)) delete (yyvaluep->floatList); };
-
-/* Line 1000 of yacc.c  */
-#line 4303 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 413: /* "fexpveclist" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).floatList)) delete ((*yyvaluep).floatList); };
+/* Line 1393 of yacc.c  */
+#line 4326 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 413: /* fexpveclist */
+/* Line 1393 of yacc.c  */
 #line 464 "Grammar.ypp"
-	{ if((yyvaluep->floatVecList)) delete (yyvaluep->floatVecList); };
-
-/* Line 1000 of yacc.c  */
-#line 4312 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 414: /* "iexplist" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).floatVecList)) delete ((*yyvaluep).floatVecList); };
+/* Line 1393 of yacc.c  */
+#line 4333 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 414: /* iexplist */
+/* Line 1393 of yacc.c  */
 #line 465 "Grammar.ypp"
-	{ if((yyvaluep->intList)) delete (yyvaluep->intList); };
-
-/* Line 1000 of yacc.c  */
-#line 4321 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 416: /* "bexplist" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).intList)) delete ((*yyvaluep).intList); };
+/* Line 1393 of yacc.c  */
+#line 4340 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 416: /* bexplist */
+/* Line 1393 of yacc.c  */
 #line 466 "Grammar.ypp"
-	{ if((yyvaluep->boolList)) delete (yyvaluep->boolList); };
-
-/* Line 1000 of yacc.c  */
-#line 4330 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 441: /* "arglist" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).boolList)) delete ((*yyvaluep).boolList); };
+/* Line 1393 of yacc.c  */
+#line 4347 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 441: /* arglist */
+/* Line 1393 of yacc.c  */
 #line 467 "Grammar.ypp"
-	{ if((yyvaluep->argList)) delete (yyvaluep->argList); };
-
-/* Line 1000 of yacc.c  */
-#line 4339 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 482: /* "valueassignment_f" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).argList)) delete ((*yyvaluep).argList); };
+/* Line 1393 of yacc.c  */
+#line 4354 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 482: /* valueassignment_f */
+/* Line 1393 of yacc.c  */
 #line 464 "Grammar.ypp"
-	{ if((yyvaluep->floatVecList)) delete (yyvaluep->floatVecList); };
-
-/* Line 1000 of yacc.c  */
-#line 4348 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 483: /* "valueassignment_fv" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).floatVecList)) delete ((*yyvaluep).floatVecList); };
+/* Line 1393 of yacc.c  */
+#line 4361 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 483: /* valueassignment_fv */
+/* Line 1393 of yacc.c  */
 #line 464 "Grammar.ypp"
-	{ if((yyvaluep->floatVecList)) delete (yyvaluep->floatVecList); };
-
-/* Line 1000 of yacc.c  */
-#line 4357 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
-      case 484: /* "valueassignment_fvl" */
-
-/* Line 1000 of yacc.c  */
+        { if(((*yyvaluep).floatVecList)) delete ((*yyvaluep).floatVecList); };
+/* Line 1393 of yacc.c  */
+#line 4368 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
+      case 484: /* valueassignment_fvl */
+/* Line 1393 of yacc.c  */
 #line 464 "Grammar.ypp"
-	{ if((yyvaluep->floatVecList)) delete (yyvaluep->floatVecList); };
-
-/* Line 1000 of yacc.c  */
-#line 4366 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-	break;
+        { if(((*yyvaluep).floatVecList)) delete ((*yyvaluep).floatVecList); };
+/* Line 1393 of yacc.c  */
+#line 4375 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
+        break;
 
       default:
-	break;
+        break;
     }
 }
 
-/* Prevent warnings from -Wmissing-prototypes.  */
-#ifdef YYPARSE_PARAM
-#if defined __STDC__ || defined __cplusplus
-int yyparse (void *YYPARSE_PARAM);
-#else
-int yyparse ();
-#endif
-#else /* ! YYPARSE_PARAM */
-#if defined __STDC__ || defined __cplusplus
-int yyparse (void);
-#else
-int yyparse ();
-#endif
-#endif /* ! YYPARSE_PARAM */
+
 
 
 /* The lookahead symbol.  */
 int yychar;
 
+
+#ifndef YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
+# define YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
+# define YY_IGNORE_MAYBE_UNINITIALIZED_END
+#endif
+#ifndef YY_INITIAL_VALUE
+# define YY_INITIAL_VALUE(Value) /* Nothing. */
+#endif
+
 /* The semantic value of the lookahead symbol.  */
-YYSTYPE yylval;
+YYSTYPE yylval YY_INITIAL_VALUE(yyval_default);
 
 /* Number of syntax errors so far.  */
 int yynerrs;
 
 
-
-/*-------------------------.
-| yyparse or yypush_parse.  |
-`-------------------------*/
+/*----------.
+| yyparse.  |
+`----------*/
 
 #ifdef YYPARSE_PARAM
 #if (defined __STDC__ || defined __C99__FUNC__ \
@@ -4423,8 +4427,6 @@ yyparse ()
 #endif
 #endif
 {
-
-
     int yystate;
     /* Number of tokens to shift before error messages enabled.  */
     int yyerrstatus;
@@ -4433,7 +4435,7 @@ yyparse ()
        `yyss': related to states.
        `yyvs': related to semantic values.
 
-       Refer to the stacks thru separate pointers, to allow yyoverflow
+       Refer to the stacks through separate pointers, to allow yyoverflow
        to reallocate them elsewhere.  */
 
     /* The state stack.  */
@@ -4451,7 +4453,7 @@ yyparse ()
   int yyn;
   int yyresult;
   /* Lookahead token as an internal (translated) token number.  */
-  int yytoken;
+  int yytoken = 0;
   /* The variables used to return semantic value and location from the
      action routines.  */
   YYSTYPE yyval;
@@ -4469,9 +4471,8 @@ yyparse ()
      Keep to zero when no symbol should be popped.  */
   int yylen = 0;
 
-  yytoken = 0;
-  yyss = yyssa;
-  yyvs = yyvsa;
+  yyssp = yyss = yyssa;
+  yyvsp = yyvs = yyvsa;
   yystacksize = YYINITDEPTH;
 
   YYDPRINTF ((stderr, "Starting parse\n"));
@@ -4481,16 +4482,8 @@ yyparse ()
   yynerrs = 0;
   yychar = YYEMPTY; /* Cause a token to be read.  */
 
-  /* Initialize stack pointers.
-     Waste one element of value and location stack
-     so that they stay on the same level as the state stack.
-     The wasted elements are never initialized.  */
-  yyssp = yyss;
-  yyvsp = yyvs;
-
 /* User initialization code.  */
-
-/* Line 1242 of yacc.c  */
+/* Line 1570 of yacc.c  */
 #line 394 "Grammar.ypp"
 {
     /*$$.container = Container::create(NULL);
@@ -4518,10 +4511,8 @@ yyparse ()
     pCRep           = nvFX::getCstBufferRepositorySingleton()->getExInterface();
     pURep           = nvFX::getUniformRepositorySingleton()->getExInterface();
 }
-
-/* Line 1242 of yacc.c  */
-#line 4524 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
-
+/* Line 1570 of yacc.c  */
+#line 4516 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
   goto yysetstate;
 
 /*------------------------------------------------------------.
@@ -4613,7 +4604,7 @@ yybackup:
 
   /* First try to decide what to do without reference to lookahead token.  */
   yyn = yypact[yystate];
-  if (yyn == YYPACT_NINF)
+  if (yypact_value_is_default (yyn))
     goto yydefault;
 
   /* Not known => get a lookahead token if don't already have one.  */
@@ -4644,8 +4635,8 @@ yybackup:
   yyn = yytable[yyn];
   if (yyn <= 0)
     {
-      if (yyn == 0 || yyn == YYTABLE_NINF)
-	goto yyerrlab;
+      if (yytable_value_is_error (yyn))
+        goto yyerrlab;
       yyn = -yyn;
       goto yyreduce;
     }
@@ -4662,7 +4653,9 @@ yybackup:
   yychar = YYEMPTY;
 
   yystate = yyn;
+  YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
   *++yyvsp = yylval;
+  YY_IGNORE_MAYBE_UNINITIALIZED_END
 
   goto yynewstate;
 
@@ -4699,304 +4692,262 @@ yyreduce:
   switch (yyn)
     {
         case 29:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1047 "Grammar.ypp"
     {
     curContainer->separateShadersEnable((yyvsp[(4) - (4)].bval));
-;}
+}
     break;
 
   case 30:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1055 "Grammar.ypp"
-    { (yyval.s) = (yyvsp[(1) - (1)].s); ;}
+    { (yyval.s) = (yyvsp[(1) - (1)].s); }
     break;
 
   case 31:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1056 "Grammar.ypp"
-    { (yyval.s) = (yyvsp[(1) - (1)].s); ;}
+    { (yyval.s) = (yyvsp[(1) - (1)].s); }
     break;
 
   case 32:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1062 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (1)].fval); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (1)].fval); }
     break;
 
   case 33:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1063 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  +  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  +  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 34:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1064 "Grammar.ypp"
-    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  +  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  +  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 35:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1065 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  +  (float)(yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  +  (float)(yyvsp[(3) - (3)].ival); }
     break;
 
   case 36:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1066 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  -  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  -  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 37:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1067 "Grammar.ypp"
-    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  -  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  -  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 38:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1068 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  -  (float)(yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  -  (float)(yyvsp[(3) - (3)].ival); }
     break;
 
   case 39:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1069 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  *  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  *  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 40:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1070 "Grammar.ypp"
-    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  *  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  *  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 41:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1071 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  *  (float)(yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  *  (float)(yyvsp[(3) - (3)].ival); }
     break;
 
   case 42:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1072 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  /  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  /  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 43:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1073 "Grammar.ypp"
-    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  /  (yyvsp[(3) - (3)].fval); ;}
+    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  /  (yyvsp[(3) - (3)].fval); }
     break;
 
   case 44:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1074 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  /  (float)(yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.fval)  =  (yyvsp[(1) - (3)].fval)  /  (float)(yyvsp[(3) - (3)].ival); }
     break;
 
   case 45:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1075 "Grammar.ypp"
-    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  /  (float)(yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.fval)  =  (float)(yyvsp[(1) - (3)].ival)  /  (float)(yyvsp[(3) - (3)].ival); }
     break;
 
   case 46:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1076 "Grammar.ypp"
-    {  (yyval.fval)  =  -(yyvsp[(2) - (2)].fval); ;}
+    {  (yyval.fval)  =  -(yyvsp[(2) - (2)].fval); }
     break;
 
   case 47:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1077 "Grammar.ypp"
-    {  (yyval.fval)  =  pow  ((yyvsp[(1) - (3)].fval),  (yyvsp[(3) - (3)].fval)); ;}
+    {  (yyval.fval)  =  pow  ((yyvsp[(1) - (3)].fval),  (yyvsp[(3) - (3)].fval)); }
     break;
 
   case 48:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1078 "Grammar.ypp"
-    {  (yyval.fval)  =  pow  ((float)(yyvsp[(1) - (3)].ival),  (yyvsp[(3) - (3)].fval)); ;}
+    {  (yyval.fval)  =  pow  ((float)(yyvsp[(1) - (3)].ival),  (yyvsp[(3) - (3)].fval)); }
     break;
 
   case 49:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1079 "Grammar.ypp"
-    {  (yyval.fval)  =  pow  ((yyvsp[(1) - (3)].fval),  (float)(yyvsp[(3) - (3)].ival)); ;}
+    {  (yyval.fval)  =  pow  ((yyvsp[(1) - (3)].fval),  (float)(yyvsp[(3) - (3)].ival)); }
     break;
 
   case 50:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1080 "Grammar.ypp"
-    {  (yyval.fval)  =  pow  ((float)(yyvsp[(1) - (3)].ival),  (float)(yyvsp[(3) - (3)].ival)); ;}
+    {  (yyval.fval)  =  pow  ((float)(yyvsp[(1) - (3)].ival),  (float)(yyvsp[(3) - (3)].ival)); }
     break;
 
   case 51:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1081 "Grammar.ypp"
-    {  (yyval.fval)  =  (yyvsp[(2) - (3)].fval); ;}
+    {  (yyval.fval)  =  (yyvsp[(2) - (3)].fval); }
     break;
 
   case 52:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1089 "Grammar.ypp"
-    {  (yyval.ival)  =  (yyvsp[(1) - (1)].ival); ;}
+    {  (yyval.ival)  =  (yyvsp[(1) - (1)].ival); }
     break;
 
   case 53:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1090 "Grammar.ypp"
-    {  (yyval.ival)  =  (yyvsp[(1) - (3)].ival)  +  (yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.ival)  =  (yyvsp[(1) - (3)].ival)  +  (yyvsp[(3) - (3)].ival); }
     break;
 
   case 54:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1091 "Grammar.ypp"
-    {  (yyval.ival)  =  (yyvsp[(1) - (3)].ival)  -  (yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.ival)  =  (yyvsp[(1) - (3)].ival)  -  (yyvsp[(3) - (3)].ival); }
     break;
 
   case 55:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1092 "Grammar.ypp"
-    {  (yyval.ival)  =  (yyvsp[(1) - (3)].ival)  *  (yyvsp[(3) - (3)].ival); ;}
+    {  (yyval.ival)  =  (yyvsp[(1) - (3)].ival)  *  (yyvsp[(3) - (3)].ival); }
     break;
 
   case 56:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1093 "Grammar.ypp"
-    {  (yyval.ival)  =  -(yyvsp[(2) - (2)].ival); ;}
+    {  (yyval.ival)  =  -(yyvsp[(2) - (2)].ival); }
     break;
 
   case 57:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1094 "Grammar.ypp"
-    {  (yyval.ival)  =  (yyvsp[(2) - (3)].ival); ;}
+    {  (yyval.ival)  =  (yyvsp[(2) - (3)].ival); }
     break;
 
   case 58:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1099 "Grammar.ypp"
-    {  (yyval.bval)  =  true; ;}
+    {  (yyval.bval)  =  true; }
     break;
 
   case 59:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1100 "Grammar.ypp"
-    {  (yyval.bval)  =  false; ;}
+    {  (yyval.bval)  =  false; }
     break;
 
   case 60:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1106 "Grammar.ypp"
-    { (yyval.bval) = (yyvsp[(1) - (1)].bval); ;}
+    { (yyval.bval) = (yyvsp[(1) - (1)].bval); }
     break;
 
   case 61:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1107 "Grammar.ypp"
     { 
     if(((yyvsp[(1) - (1)].ival) != 0)&&((yyvsp[(1) - (1)].ival) != 1)) yyerror("    Warning : truncation of float to bool");
-    (yyval.bval) = (yyvsp[(1) - (1)].ival) ? true: false; ;}
+    (yyval.bval) = (yyvsp[(1) - (1)].ival) ? true: false; }
     break;
 
   case 62:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1110 "Grammar.ypp"
     { 
     if(((yyvsp[(1) - (1)].fval) != 0.0f)&&((yyvsp[(1) - (1)].fval) != 1.0f)) yyerror("    Warning : truncation of float to bool");
-    (yyval.bval) = (yyvsp[(1) - (1)].fval) ? true: false; ;}
+    (yyval.bval) = (yyvsp[(1) - (1)].fval) ? true: false; }
     break;
 
   case 63:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1114 "Grammar.ypp"
-    { (yyval.ival) = (yyvsp[(1) - (1)].ival); ;}
+    { (yyval.ival) = (yyvsp[(1) - (1)].ival); }
     break;
 
   case 64:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1115 "Grammar.ypp"
     { 
     if(((yyvsp[(1) - (1)].fval) - (int)(yyvsp[(1) - (1)].fval))!=0.0f)
         yyerror("    Warning : truncation of float to int");
-    (yyval.ival) = (int)(yyvsp[(1) - (1)].fval); ;}
+    (yyval.ival) = (int)(yyvsp[(1) - (1)].fval); }
     break;
 
   case 65:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1119 "Grammar.ypp"
-    { (yyval.ival) = (yyvsp[(1) - (1)].bval) ? 1: 0; ;}
+    { (yyval.ival) = (yyvsp[(1) - (1)].bval) ? 1: 0; }
     break;
 
   case 66:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1122 "Grammar.ypp"
-    { (yyval.fval) = (yyvsp[(1) - (1)].fval); ;}
+    { (yyval.fval) = (yyvsp[(1) - (1)].fval); }
     break;
 
   case 67:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1123 "Grammar.ypp"
-    { (yyval.fval) = (float)(yyvsp[(1) - (1)].ival); ;}
+    { (yyval.fval) = (float)(yyvsp[(1) - (1)].ival); }
     break;
 
   case 68:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1124 "Grammar.ypp"
-    { (yyval.fval) = (yyvsp[(1) - (1)].bval) ? 1.0f: 0.0f; ;}
+    { (yyval.fval) = (yyvsp[(1) - (1)].bval) ? 1.0f: 0.0f; }
     break;
 
   case 71:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1149 "Grammar.ypp"
-    { (yyval.shaderList) = NULL; ;}
+    { (yyval.shaderList) = NULL; }
     break;
 
   case 72:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1150 "Grammar.ypp"
     {
     (yyval.shaderList) = new ShaderList;
@@ -5012,12 +4963,11 @@ yyreduce:
     if(pShader)
         ((yyval.shaderList))->push_back(pShader);
     delete (yyvsp[(1) - (1)].s);
-;}
+}
     break;
 
   case 73:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1165 "Grammar.ypp"
     {
     (yyval.shaderList) = (yyvsp[(1) - (3)].shaderList);
@@ -5033,226 +4983,202 @@ yyreduce:
     if(pShader)
         ((yyval.shaderList))->push_back(pShader);
     delete (yyvsp[(3) - (3)].s);
-;}
+}
     break;
 
   case 74:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1182 "Grammar.ypp"
-    { (yyval.shaderList) = NULL; ;}
+    { (yyval.shaderList) = NULL; }
     break;
 
   case 75:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1198 "Grammar.ypp"
-    { (yyval.shaderList) = (yyvsp[(1) - (1)].shaderList); ;}
+    { (yyval.shaderList) = (yyvsp[(1) - (1)].shaderList); }
     break;
 
   case 76:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1199 "Grammar.ypp"
-    { (yyval.shaderList) = (yyvsp[(2) - (3)].shaderList); ;}
+    { (yyval.shaderList) = (yyvsp[(2) - (3)].shaderList); }
     break;
 
   case 77:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1206 "Grammar.ypp"
-    { (yyval.varNameList) = NULL; ;}
+    { (yyval.varNameList) = NULL; }
     break;
 
   case 78:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1207 "Grammar.ypp"
     {
     (yyval.varNameList) = new VarNameList;
     (yyval.varNameList)->push_back(*(yyvsp[(1) - (1)].s));
     delete (yyvsp[(1) - (1)].s);
-;}
+}
     break;
 
   case 79:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1212 "Grammar.ypp"
     {
     (yyval.varNameList) = (yyvsp[(1) - (3)].varNameList);
     (yyval.varNameList)->push_back(*(yyvsp[(3) - (3)].s));
     delete (yyvsp[(3) - (3)].s);
-;}
+}
     break;
 
   case 82:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1237 "Grammar.ypp"
     {
     (yyval.floatList) = new FloatList;
     (yyval.floatList)->push_back((yyvsp[(1) - (1)].fval));
-;}
+}
     break;
 
   case 83:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1241 "Grammar.ypp"
     {
     (yyval.floatList) = new FloatList;
     (yyval.floatList)->push_back((float)(yyvsp[(1) - (1)].ival));
-;}
+}
     break;
 
   case 84:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1245 "Grammar.ypp"
     {
     (yyval.floatList) = (yyvsp[(1) - (3)].floatList);
     (yyval.floatList)->push_back((yyvsp[(3) - (3)].fval));
-;}
+}
     break;
 
   case 85:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1249 "Grammar.ypp"
     {
     (yyval.floatList) = (yyvsp[(1) - (3)].floatList);
     (yyval.floatList)->push_back((float)(yyvsp[(3) - (3)].ival));
-;}
+}
     break;
 
   case 86:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1253 "Grammar.ypp"
     { 
     (yyval.floatList) = (yyvsp[(1) - (2)].floatList);
     yyerror ("Error in the list of floats");
-;}
+}
     break;
 
   case 87:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1259 "Grammar.ypp"
     {
     (yyval.floatVecList) = new FloatVecList;
     (yyval.floatVecList)->push_back((yyvsp[(2) - (3)].floatList));
-;}
+}
     break;
 
   case 88:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1263 "Grammar.ypp"
     {
     (yyval.floatVecList) = (yyvsp[(1) - (5)].floatVecList);
     (yyval.floatVecList)->push_back((yyvsp[(4) - (5)].floatList));
-;}
+}
     break;
 
   case 89:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1267 "Grammar.ypp"
-    { (yyval.floatVecList) = (yyvsp[(1) - (2)].floatVecList); yyerror ("Error in the list of default values"); ;}
+    { (yyval.floatVecList) = (yyvsp[(1) - (2)].floatVecList); yyerror ("Error in the list of default values"); }
     break;
 
   case 90:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1270 "Grammar.ypp"
     {
     (yyval.intList) = new IntList;
     (yyval.intList)->push_back((yyvsp[(1) - (1)].ival));
-;}
+}
     break;
 
   case 91:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1279 "Grammar.ypp"
     {
     (yyval.intList) = (yyvsp[(1) - (3)].intList);
     (yyval.intList)->push_back((yyvsp[(3) - (3)].ival));
-;}
+}
     break;
 
   case 92:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1290 "Grammar.ypp"
     {
     (yyval.intVecList) = new IntVecList;
     (yyval.intVecList)->push_back((yyvsp[(2) - (3)].intList));
-;}
+}
     break;
 
   case 93:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1294 "Grammar.ypp"
     {
     (yyval.intVecList) = (yyvsp[(1) - (5)].intVecList);
     (yyval.intVecList)->push_back((yyvsp[(4) - (5)].intList));
-;}
+}
     break;
 
   case 94:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1298 "Grammar.ypp"
-    { yyerror ("Error in the list of default values"); ;}
+    { yyerror ("Error in the list of default values"); }
     break;
 
   case 95:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1301 "Grammar.ypp"
     {
     (yyval.boolList) = new BoolList;
     (yyval.boolList)->push_back((yyvsp[(1) - (1)].bval));
-;}
+}
     break;
 
   case 96:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1305 "Grammar.ypp"
     {
     (yyval.boolList) = (yyvsp[(1) - (3)].boolList);
     (yyval.boolList)->push_back((yyvsp[(3) - (3)].bval));
-;}
+}
     break;
 
   case 97:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1325 "Grammar.ypp"
     { 
     (yyval.argVal) = new ArgVal(IUniform::TInt); (yyval.argVal)->val.i[0] = (yyvsp[(1) - (1)].ival); 
     LOGD("Arg val = %d\n", (yyvsp[(1) - (1)].ival));
-;}
+}
     break;
 
   case 98:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1329 "Grammar.ypp"
     { 
     (yyval.argVal) = new ArgVal(IUniform::TFloat); (yyval.argVal)->val.f[0] = (yyvsp[(1) - (1)].fval);
     LOGD("Arg val = %f\n", (yyvsp[(1) - (1)].fval));
-;}
+}
     break;
 
   case 99:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1333 "Grammar.ypp"
     {
     IResource* pRes = curContainer->findResource((yyvsp[(1) - (1)].s)->c_str());
@@ -5282,419 +5208,380 @@ yyreduce:
         }
     }
     delete (yyvsp[(1) - (1)].s);
-;}
+}
     break;
 
   case 100:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1362 "Grammar.ypp"
     { 
     yyerror("Error in argument\n");
-;}
+}
     break;
 
   case 101:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1367 "Grammar.ypp"
-    { (yyval.argValList) = new ArgValList; ;}
+    { (yyval.argValList) = new ArgValList; }
     break;
 
   case 102:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1368 "Grammar.ypp"
-    { (yyval.argValList) = new ArgValList; ;}
+    { (yyval.argValList) = new ArgValList; }
     break;
 
   case 103:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1369 "Grammar.ypp"
     {
     (yyval.argValList) = new ArgValList;
     (yyval.argValList)->push_back((yyvsp[(1) - (1)].argVal));
-    ;}
+    }
     break;
 
   case 104:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1373 "Grammar.ypp"
     {
     (yyval.argValList) = (yyvsp[(1) - (3)].argValList);
     (yyval.argValList)->push_back((yyvsp[(3) - (3)].argVal));
-    ;}
+    }
     break;
 
   case 105:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1377 "Grammar.ypp"
-    { yyerror("Error in argument list\n");;}
+    { yyerror("Error in argument list\n");}
     break;
 
   case 207:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1499 "Grammar.ypp"
-    { (yyval.clear_mode) = (yyvsp[(1) - (1)].clear_mode); ;}
+    { (yyval.clear_mode) = (yyvsp[(1) - (1)].clear_mode); }
     break;
 
   case 208:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1500 "Grammar.ypp"
-    { (yyval.clear_mode) = (ClearMode)((unsigned int)(yyvsp[(3) - (3)].clear_mode) | (unsigned int)(yyvsp[(1) - (3)].clear_mode)); ;}
+    { (yyval.clear_mode) = (ClearMode)((unsigned int)(yyvsp[(3) - (3)].clear_mode) | (unsigned int)(yyvsp[(1) - (3)].clear_mode)); }
     break;
 
   case 212:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1510 "Grammar.ypp"
     {
     //if($4->size() > 0)
     //    curPass->createState(IPassState::TVertexShader, & (*$4)[0], (int)$4->size());
     delete (yyvsp[(4) - (5)].s);
-    ;}
+    }
     break;
 
   case 213:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1515 "Grammar.ypp"
     {
     //if($4->size() > 0)
     //    curPass->createState(IPassState::TVertexShader, & (*$4)[0], (int)$4->size());
-    ;}
+    }
     break;
 
   case 214:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1519 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createState(IPassState::TVertexShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 215:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1524 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createState(IPassState::TVertexShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 216:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1530 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size()>0)
         curPass->createState(IPassState::TFragmentShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 217:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1535 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size()>0)
         curPass->createState(IPassState::TFragmentShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 218:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1541 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createState(IPassState::TComputeShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 219:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1546 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createState(IPassState::TComputeShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 220:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1552 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createState(IPassState::TPathShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 221:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1557 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createState(IPassState::TPathShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 222:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1563 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createState(IPassState::TGeometryShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 223:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1568 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createState(IPassState::TGeometryShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 224:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1574 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createState(IPassState::TTCSShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 225:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1579 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createState(IPassState::TTCSShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 226:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1585 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createState(IPassState::TTESShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 227:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1590 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createState(IPassState::TTESShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 228:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1596 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TVertexShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 229:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1601 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TVertexShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 230:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1607 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size()>0)
         curPass->createStateOverride(IPassState::TFragmentShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 231:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1612 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size()>0)
         curPass->createStateOverride(IPassState::TFragmentShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 232:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1618 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TComputeShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 233:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1623 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TComputeShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 234:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1629 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TPathShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 235:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1634 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TPathShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 236:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1640 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TGeometryShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 237:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1645 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TGeometryShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 238:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1651 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TTCSShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 239:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1656 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TTCSShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 240:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1662 "Grammar.ypp"
     {
     if((yyvsp[(4) - (5)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TTESShader, & (*(yyvsp[(4) - (5)].shaderList))[0], (int)(yyvsp[(4) - (5)].shaderList)->size());
     delete (yyvsp[(4) - (5)].shaderList);
-    ;}
+    }
     break;
 
   case 241:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1667 "Grammar.ypp"
     {
     if((yyvsp[(7) - (8)].shaderList)->size() > 0)
         curPass->createStateOverride(IPassState::TTESShader, & (*(yyvsp[(7) - (8)].shaderList))[0], (int)(yyvsp[(7) - (8)].shaderList)->size(), (yyvsp[(4) - (8)].s)->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].shaderList);
-    ;}
+    }
     break;
 
   case 242:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1673 "Grammar.ypp"
     {
     #ifndef OGLES2
@@ -5710,12 +5597,11 @@ yyreduce:
     #endif
     delete (yyvsp[(4) - (10)].s);
     delete (yyvsp[(8) - (10)].varNameList);
-    ;}
+    }
     break;
 
   case 243:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1688 "Grammar.ypp"
     {
     #ifndef OGLES2
@@ -5725,12 +5611,11 @@ yyreduce:
     #endif
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-    ;}
+    }
     break;
 
   case 244:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1697 "Grammar.ypp"
     {
     ValueList* pvalueList = (yyvsp[(6) - (7)].valueList);
@@ -5745,12 +5630,11 @@ yyreduce:
         delete pvalueList;
     }
     delete (yyvsp[(4) - (7)].s);
-    ;}
+    }
     break;
 
   case 245:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1754 "Grammar.ypp"
     {
     #ifndef OGLES2
@@ -5760,12 +5644,11 @@ yyreduce:
     #endif
     delete (yyvsp[(4) - (11)].s);
     delete (yyvsp[(10) - (11)].s);
-    ;}
+    }
     break;
 
   case 246:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1773 "Grammar.ypp"
     {
     // walk through the vector list and check few things then send the packed version
@@ -5794,12 +5677,11 @@ yyreduce:
     delete farray;
     delete (yyvsp[(4) - (13)].s);
     delete (yyvsp[(11) - (13)].floatVecList);
-    ;}
+    }
     break;
 
   case 247:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1801 "Grammar.ypp"
     {
     IntVecList *pvl = (yyvsp[(10) - (11)].intVecList);
@@ -5809,33 +5691,30 @@ yyreduce:
     delete (yyvsp[(4) - (11)].s);
     delete pl;
     delete pvl;
-    ;}
+    }
     break;
 
   case 248:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1810 "Grammar.ypp"
     {
     curPass->createState((yyvsp[(4) - (13)].s)->c_str(), (yyvsp[(6) - (13)].ival), &(*(yyvsp[(11) - (13)].boolList))[0], (int)(yyvsp[(11) - (13)].boolList)->size());
     delete (yyvsp[(4) - (13)].s);
     delete (yyvsp[(11) - (13)].boolList);
-    ;}
+    }
     break;
 
   case 249:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1815 "Grammar.ypp"
     {
     yyerror("TODO: SHDPROFILE for HLSL to do...\n");
     delete (yyvsp[(4) - (5)].s);
-    ;}
+    }
     break;
 
   case 250:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1819 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(7) - (8)].s)->c_str());
@@ -5853,12 +5732,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 251:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1836 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(7) - (8)].s)->c_str());
@@ -5876,12 +5754,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 252:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1853 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(7) - (8)].s)->c_str());
@@ -5899,12 +5776,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 253:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1870 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(7) - (8)].s)->c_str());
@@ -5922,12 +5798,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 254:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1887 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(9) - (10)].s)->c_str());
@@ -5945,12 +5820,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (10)].s);
     delete (yyvsp[(9) - (10)].s);
-;}
+}
     break;
 
   case 255:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1904 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(8) - (12)].s)->c_str());
@@ -5968,12 +5842,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (12)].s);
     delete (yyvsp[(8) - (12)].s);
-;}
+}
     break;
 
   case 256:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1921 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(8) - (12)].s)->c_str());
@@ -5991,12 +5864,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (12)].s);
     delete (yyvsp[(8) - (12)].s);
-;}
+}
     break;
 
   case 257:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1938 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(7) - (8)].s)->c_str());
@@ -6014,12 +5886,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 258:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1955 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(7) - (8)].s)->c_str());
@@ -6037,12 +5908,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 259:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1972 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(9) - (10)].s)->c_str());
@@ -6060,12 +5930,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (10)].s);
     delete (yyvsp[(9) - (10)].s);
-;}
+}
     break;
 
   case 260:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 1989 "Grammar.ypp"
     {
     IResource *pRes = curContainer->findResource((yyvsp[(8) - (12)].s)->c_str());
@@ -6083,12 +5952,11 @@ yyreduce:
     else yyerror("Error in sampler resource assignment : cannot find the resource");
     delete (yyvsp[(4) - (12)].s);
     delete (yyvsp[(8) - (12)].s);
-;}
+}
     break;
 
   case 261:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2006 "Grammar.ypp"
     {
     IPassState *pS = curPass->findState((yyvsp[(4) - (8)].s)->c_str(), 0);
@@ -6102,12 +5970,11 @@ yyreduce:
     else
         pS = curPass->createStateSamplerResource((yyvsp[(4) - (8)].s)->c_str(), (IResource*)NULL, (yyvsp[(7) - (8)].ival));
     delete (yyvsp[(4) - (8)].s);
-;}
+}
     break;
 
   case 262:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2019 "Grammar.ypp"
     {
     IPassState *pS = curPass->findStateOverride((yyvsp[(4) - (8)].s)->c_str());
@@ -6121,12 +5988,11 @@ yyreduce:
     else
         pS = curPass->createStateSamplerResourceOverride((yyvsp[(4) - (8)].s)->c_str(), (IResource*)NULL, (yyvsp[(7) - (8)].ival));
     delete (yyvsp[(4) - (8)].s);
-;}
+}
     break;
 
   case 263:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2032 "Grammar.ypp"
     {
     IPassState *pS = curPass->findState((yyvsp[(4) - (8)].s)->c_str(), 0);
@@ -6140,12 +6006,11 @@ yyreduce:
     else
         pS = curPass->createStateSamplerResource((yyvsp[(4) - (8)].s)->c_str(), (IResource*)NULL, (yyvsp[(7) - (8)].ival));
     delete (yyvsp[(4) - (8)].s);
-;}
+}
     break;
 
   case 264:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2045 "Grammar.ypp"
     {
     IPassState *pS = curPass->findStateOverride((yyvsp[(4) - (8)].s)->c_str());
@@ -6159,12 +6024,11 @@ yyreduce:
     else
         pS = curPass->createStateSamplerResourceOverride((yyvsp[(4) - (8)].s)->c_str(), (IResource*)NULL, (yyvsp[(7) - (8)].ival));
     delete (yyvsp[(4) - (8)].s);
-;}
+}
     break;
 
   case 265:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2058 "Grammar.ypp"
     {
     IPassState *pS = curPass->findState((yyvsp[(4) - (10)].s)->c_str());
@@ -6178,12 +6042,11 @@ yyreduce:
     else
         pS = curPass->createStateSamplerResource((yyvsp[(4) - (10)].s)->c_str(), (IResource*)NULL, (yyvsp[(9) - (10)].ival));
     delete (yyvsp[(4) - (10)].s);
-;}
+}
     break;
 
   case 266:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2071 "Grammar.ypp"
     {
     IPassState *pS = curPass->findState((yyvsp[(4) - (10)].s)->c_str());
@@ -6197,12 +6060,11 @@ yyreduce:
     else
         pS = curPass->createStateSamplerResource((yyvsp[(4) - (10)].s)->c_str(), (IResource*)NULL, (yyvsp[(9) - (10)].ival));
     delete (yyvsp[(4) - (10)].s);
-;}
+}
     break;
 
   case 267:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2084 "Grammar.ypp"
     {
     IPassState *pS = curPass->findState((yyvsp[(4) - (8)].s)->c_str(), 0);
@@ -6224,12 +6086,11 @@ yyreduce:
     }
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 268:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2105 "Grammar.ypp"
     {
     IPassState *pS = curPass->findStateOverride((yyvsp[(4) - (8)].s)->c_str());
@@ -6251,12 +6112,11 @@ yyreduce:
     }
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-;}
+}
     break;
 
   case 269:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2126 "Grammar.ypp"
     { // same as above but different way to write it
     IPassState *pS = curPass->findState((yyvsp[(4) - (10)].s)->c_str());
@@ -6278,12 +6138,11 @@ yyreduce:
     }
     delete (yyvsp[(4) - (10)].s);
     delete (yyvsp[(9) - (10)].s);
-;}
+}
     break;
 
   case 270:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2147 "Grammar.ypp"
     { // same as above but different way to write it
     IStateGroupDST* pSG = curContainer->findStateGroupDST((yyvsp[(4) - (5)].s)->c_str());
@@ -6294,12 +6153,11 @@ yyreduce:
         curPass->createState(pSG);
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 271:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2157 "Grammar.ypp"
     { // same as above but different way to write it
     IStateGroupDST* pSG = curContainer->findStateGroupDST((yyvsp[(4) - (6)].s)->c_str());
@@ -6310,12 +6168,11 @@ yyreduce:
         curPass->createState(pSG);
     }
     delete (yyvsp[(4) - (6)].s);
-;}
+}
     break;
 
   case 272:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2167 "Grammar.ypp"
     { // same as above but different way to write it
     IStateGroupRaster* pSG = curContainer->findStateGroupRaster((yyvsp[(4) - (5)].s)->c_str());
@@ -6326,12 +6183,11 @@ yyreduce:
         curPass->createState(pSG);
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 273:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2177 "Grammar.ypp"
     { // same as above but different way to write it
     IStateGroupRaster* pSG = curContainer->findStateGroupRaster((yyvsp[(4) - (6)].s)->c_str());
@@ -6342,12 +6198,11 @@ yyreduce:
         curPass->createState(pSG);
     }
     delete (yyvsp[(4) - (6)].s);
-;}
+}
     break;
 
   case 274:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2187 "Grammar.ypp"
     { // same as above but different way to write it
     IStateGroupCS* pSG = curContainer->findStateGroupCS((yyvsp[(4) - (5)].s)->c_str());
@@ -6358,12 +6213,11 @@ yyreduce:
         curPass->createState(pSG);
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 275:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2197 "Grammar.ypp"
     { // same as above but different way to write it
     IStateGroupCS* pSG = curContainer->findStateGroupCS((yyvsp[(4) - (6)].s)->c_str());
@@ -6374,30 +6228,27 @@ yyreduce:
         curPass->createState(pSG);
     }
     delete (yyvsp[(4) - (6)].s);
-;}
+}
     break;
 
   case 276:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2210 "Grammar.ypp"
     {
     curPass->createStateRenderMode((yyvsp[(4) - (5)].render_mode));
-;}
+}
     break;
 
   case 277:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2213 "Grammar.ypp"
     {
     curPass->createStateRenderGroup((yyvsp[(4) - (5)].ival));
-;}
+}
     break;
 
   case 278:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2216 "Grammar.ypp"
     {
     if((*(yyvsp[(4) - (5)].s)) == "BackBuffer")
@@ -6416,17 +6267,15 @@ yyreduce:
     break;
 
   case 279:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2230 "Grammar.ypp"
     {
     curPass->createStateClearMode((yyvsp[(4) - (5)].clear_mode));
-;}
+}
     break;
 
   case 280:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2233 "Grammar.ypp"
     {
     if((*(yyvsp[(4) - (5)].s)) == "backbuffer")
@@ -6441,12 +6290,11 @@ yyreduce:
         }
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 281:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2247 "Grammar.ypp"
     {
     FloatVecList *pfvl = (yyvsp[(7) - (8)].floatVecList);
@@ -6457,22 +6305,20 @@ yyreduce:
     else
         yyerror("ClearColor[n] can only clear up to 4 targets\n");
     delete (yyvsp[(7) - (8)].floatVecList);
-;}
+}
     break;
 
   case 282:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2257 "Grammar.ypp"
     {
     curPass->createStateClearColor(0, (*(yyvsp[(5) - (7)].floatList))[0], (*(yyvsp[(5) - (7)].floatList))[1], (*(yyvsp[(5) - (7)].floatList))[2], (*(yyvsp[(5) - (7)].floatList))[3]);
     delete (yyvsp[(5) - (7)].floatList);
-;}
+}
     break;
 
   case 283:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2261 "Grammar.ypp"
     {
     if((yyvsp[(5) - (7)].intList)->size() >= 4)
@@ -6480,12 +6326,11 @@ yyreduce:
     else
         yyerror("Viewport needs a 4 or 6 components vector\n");
     delete (yyvsp[(5) - (7)].intList);
-;}
+}
     break;
 
   case 284:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2268 "Grammar.ypp"
     {
     if(((*(yyvsp[(4) - (8)].s)) == "backbuffer")||((*(yyvsp[(6) - (8)].s)) == "backbuffer")) {
@@ -6507,30 +6352,27 @@ yyreduce:
     }
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(6) - (8)].s);
-;}
+}
     break;
 
   case 285:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2289 "Grammar.ypp"
     {
     curPass->setLoopCount((yyvsp[(4) - (5)].ival));
-;}
+}
     break;
 
   case 286:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2292 "Grammar.ypp"
     {
     curPass->setActive((yyvsp[(4) - (5)].bval));
-;}
+}
     break;
 
   case 287:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2298 "Grammar.ypp"
     {
     LOGD("computeGroups\n");
@@ -6543,12 +6385,11 @@ yyreduce:
     yyerror("Compute Not supported in this build\n");
 #endif
     delete (yyvsp[(5) - (7)].intList);
-;}
+}
     break;
 
   case 288:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2313 "Grammar.ypp"
     {
     LOGD("CUDAMODULE\n");
@@ -6559,12 +6400,11 @@ yyreduce:
 #else
     LOGI("CUDA Not supported in this build\n");
 #endif
-;}
+}
     break;
 
   case 289:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2323 "Grammar.ypp"
     {
     LOGD("CUDAKERNEL\n");
@@ -6611,12 +6451,11 @@ yyreduce:
 #endif
     delete (yyvsp[(7) - (9)].argValList);
     delete (yyvsp[(5) - (9)].s);
-;}
+}
     break;
 
   case 290:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2369 "Grammar.ypp"
     {
     LOGD("CUDASHMEM\n");
@@ -6625,12 +6464,11 @@ yyreduce:
 #else
     LOGI("CUDA Not supported in this build\n");
 #endif
-;}
+}
     break;
 
   case 291:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2377 "Grammar.ypp"
     {
     LOGD("CUDAGRID\n");
@@ -6648,12 +6486,11 @@ yyreduce:
     LOGI("CUDA Not supported in this build\n");
 #endif
     delete (yyvsp[(4) - (5)].intVecList);
-;}
+}
     break;
 
   case 292:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2394 "Grammar.ypp"
     {
     LOGD("CUDABLOCK\n");
@@ -6671,42 +6508,38 @@ yyreduce:
     LOGI("CUDA Not supported in this build\n");
 #endif
     delete (yyvsp[(4) - (5)].intVecList);
-;}
+}
     break;
 
   case 293:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2414 "Grammar.ypp"
     {
     curPass->bindAttribute((yyvsp[(4) - (8)].s)->c_str(), (yyvsp[(7) - (8)].ival));
     delete (yyvsp[(4) - (8)].s);
-;}
+}
     break;
 
   case 294:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2418 "Grammar.ypp"
     { 
     yyerror("Error in a state of the Pass\n");
-;}
+}
     break;
 
   case 295:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2427 "Grammar.ypp"
     {
     //printf("Creation of PASS\n");
     curPass = curTechnique->addPass()->getExInterface();
     curAnnotations = curPass->annotations()->getExInterface();
-    ;}
+    }
     break;
 
   case 296:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2432 "Grammar.ypp"
     {
     LOGI("Pass with no name...\n");
@@ -6716,23 +6549,21 @@ yyreduce:
     curDSTState = NULL;
     curPRState = NULL;
     lex_pop_state();
-;}
+}
     break;
 
   case 297:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2441 "Grammar.ypp"
     {
     //printf("Creation of PASS %s\n", $2->c_str());
     curPass = curTechnique->addPass((yyvsp[(2) - (2)].s)->c_str())->getExInterface();
     curAnnotations = curPass->annotations()->getExInterface();
-    ;}
+    }
     break;
 
   case 298:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2446 "Grammar.ypp"
     {
     LOGD("Pass %s...\n", (yyvsp[(2) - (7)].s)->c_str() );
@@ -6743,32 +6574,29 @@ yyreduce:
     curDSTState = NULL;
     curPRState = NULL;
     lex_pop_state();
-;}
+}
     break;
 
   case 299:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2459 "Grammar.ypp"
     {
     curTechnique->bindAttribute((yyvsp[(3) - (7)].s)->c_str(), (yyvsp[(6) - (7)].ival));
     delete (yyvsp[(3) - (7)].s);
-;}
+}
     break;
 
   case 300:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2463 "Grammar.ypp"
     {
     curTechnique->bindAttribute((yyvsp[(3) - (7)].s)->c_str(), (yyvsp[(6) - (7)].ival));
     delete (yyvsp[(3) - (7)].s);
-;}
+}
     break;
 
   case 301:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2467 "Grammar.ypp"
     {
     ITechnique *pTech = curContainer->findTechnique((yyvsp[(2) - (3)].s)->c_str());
@@ -6780,12 +6608,11 @@ yyreduce:
         yyerror("Error in adding a sub-technique\n");
     }
     delete (yyvsp[(2) - (3)].s);
-;}
+}
     break;
 
   case 302:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2478 "Grammar.ypp"
     {
     ITechnique *pTech = curContainer->findTechnique((yyvsp[(2) - (4)].s)->c_str());
@@ -6797,122 +6624,108 @@ yyreduce:
         yyerror("Error in adding a sub-technique\n");
     }
     delete (yyvsp[(2) - (4)].s);
-;}
+}
     break;
 
   case 305:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2498 "Grammar.ypp"
-    { yyerror("Error in Pass list\n");;}
+    { yyerror("Error in Pass list\n");}
     break;
 
   case 306:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2504 "Grammar.ypp"
     {
     //printf("Creation of Technique for NO name\n");
     curTechnique = curContainer->createTechnique()->getExInterface();
     curAnnotations = curTechnique->annotations()->getExInterface();
-;}
+}
     break;
 
   case 307:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2508 "Grammar.ypp"
     { 
     curAnnotations = NULL;
     lex_pop_state();
-;}
+}
     break;
 
   case 308:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2512 "Grammar.ypp"
     {
     LOGD("creation of Technique %s...\n", (yyvsp[(2) - (2)].s)->c_str() );
     curTechnique = curContainer->createTechnique((yyvsp[(2) - (2)].s)->c_str())->getExInterface();
     curAnnotations = curTechnique->annotations()->getExInterface();
     delete (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 309:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2517 "Grammar.ypp"
     { 
     lex_pop_state();
     curAnnotations = NULL;
-;}
+}
     break;
 
   case 310:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2527 "Grammar.ypp"
-    { (yyval.bval)=false; ;}
+    { (yyval.bval)=false; }
     break;
 
   case 311:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2528 "Grammar.ypp"
-    { (yyval.bval)=true; ;}
+    { (yyval.bval)=true; }
     break;
 
   case 312:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2533 "Grammar.ypp"
-    { (yyval.bval)=true; ;}
+    { (yyval.bval)=true; }
     break;
 
   case 313:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2534 "Grammar.ypp"
-    { (yyval.bval)=false; ;}
+    { (yyval.bval)=false; }
     break;
 
   case 314:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2535 "Grammar.ypp"
-    { (yyval.bval)=true; ;}
+    { (yyval.bval)=true; }
     break;
 
   case 315:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2543 "Grammar.ypp"
     {
     if(!namespaceName.empty())
         (*(yyvsp[(1) - (1)].s)) = namespaceName + std::string("_NS_") + (*(yyvsp[(1) - (1)].s));
     (yyval.s) = (yyvsp[(1) - (1)].s);
-;}
+}
     break;
 
   case 316:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2552 "Grammar.ypp"
-    { (yyval.global_varname_annots).global = false; (yyval.global_varname_annots).varName = NULL; ;}
+    { (yyval.global_varname_annots).global = false; (yyval.global_varname_annots).varName = NULL; }
     break;
 
   case 317:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2553 "Grammar.ypp"
-    { (yyval.global_varname_annots).global = false; (yyval.global_varname_annots).varName = (yyvsp[(1) - (2)].s); ;}
+    { (yyval.global_varname_annots).global = false; (yyval.global_varname_annots).varName = (yyvsp[(1) - (2)].s); }
     break;
 
   case 318:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2555 "Grammar.ypp"
     { 
     // for the case of items within a namespace :
@@ -6920,12 +6733,11 @@ yyreduce:
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
     (yyval.global_varname_annots).global = (yyvsp[(1) - (3)].bval); 
     (yyval.global_varname_annots).varName = (yyvsp[(2) - (3)].s);
-;}
+}
     break;
 
   case 319:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2567 "Grammar.ypp"
     {
     Sglobal_varname &gva = (yyvsp[(2) - (4)].global_varname_annots);
@@ -6946,12 +6758,11 @@ yyreduce:
     else yyerror("Failed in creating shader");
     delete gva.varName;
     delete (yyvsp[(4) - (4)].s);
-;}
+}
     break;
 
   case 320:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2591 "Grammar.ypp"
     {
     LOGD("SVG Path %s...\n", (yyvsp[(2) - (4)].global_varname_annots).varName ? (yyvsp[(2) - (4)].global_varname_annots).varName->c_str() : "Un-named" );
@@ -6969,12 +6780,11 @@ yyreduce:
     else yyerror("Failed in creating shader");
     delete (yyvsp[(2) - (4)].global_varname_annots).varName;
     delete (yyvsp[(4) - (4)].s);
-;}
+}
     break;
 
   case 321:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2612 "Grammar.ypp"
     {
     LOGD("PS Path %s...\n", (yyvsp[(2) - (4)].global_varname_annots).varName ? (yyvsp[(2) - (4)].global_varname_annots).varName->c_str() : "Un-named" );
@@ -6992,12 +6802,11 @@ yyreduce:
     else yyerror("Failed in creating shader");
     delete (yyvsp[(2) - (4)].global_varname_annots).varName;
     delete (yyvsp[(4) - (4)].s);
-;}
+}
     break;
 
   case 322:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2633 "Grammar.ypp"
     {
     LOGD("HLSL11Shader %s...\n", (yyvsp[(2) - (4)].global_varname_annots).varName ? (yyvsp[(2) - (4)].global_varname_annots).varName->c_str() : "Un-named" );
@@ -7032,12 +6841,11 @@ yyreduce:
     }
     delete (yyvsp[(2) - (4)].global_varname_annots).varName;
     delete (yyvsp[(4) - (4)].s);
-;}
+}
     break;
 
   case 323:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2671 "Grammar.ypp"
     {
     LOGD("HLSL10Shader %s...\n", (yyvsp[(2) - (4)].global_varname_annots).varName ? (yyvsp[(2) - (4)].global_varname_annots).varName->c_str() : "Un-named" );
@@ -7072,96 +6880,85 @@ yyreduce:
     }
     delete (yyvsp[(2) - (4)].global_varname_annots).varName;
     delete (yyvsp[(4) - (4)].s);
-;}
+}
     break;
 
   case 324:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2709 "Grammar.ypp"
-    { (yyval.bval) = false; ;}
+    { (yyval.bval) = false; }
     break;
 
   case 325:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2710 "Grammar.ypp"
-    { (yyval.bval) = true; ;}
+    { (yyval.bval) = true; }
     break;
 
   case 326:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2712 "Grammar.ypp"
-    { (yyval.bval) = false; ;}
+    { (yyval.bval) = false; }
     break;
 
   case 327:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2713 "Grammar.ypp"
-    { (yyval.bval) = true; ;}
+    { (yyval.bval) = true; }
     break;
 
   case 328:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2718 "Grammar.ypp"
     {
     (yyval.argument) = new Argument((yyvsp[(2) - (3)].bval) ? nvFX::TFloatPtr : nvFX::TFloat, (yyvsp[(3) - (3)].s));
     LOGD("Argument %s %s\n", (yyvsp[(2) - (3)].bval) ? "TFloatPtr" : "TFloat", (yyvsp[(3) - (3)].s)->c_str());
     delete (yyvsp[(3) - (3)].s);
-;}
+}
     break;
 
   case 329:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2723 "Grammar.ypp"
     {
     (yyval.argument) = new Argument((yyvsp[(1) - (4)].bval) ? ((yyvsp[(3) - (4)].bval) ? nvFX::TUIntPtr : nvFX::TUInt) : ((yyvsp[(3) - (4)].bval) ? nvFX::TIntPtr : nvFX::TInt), (yyvsp[(4) - (4)].s));
     LOGD("Argument %s %s\n", (yyvsp[(1) - (4)].bval) ? ((yyvsp[(3) - (4)].bval) ? "TUIntPtr" : "TUInt") : ((yyvsp[(3) - (4)].bval) ? "TIntPtr" : "TInt"), (yyvsp[(4) - (4)].s)->c_str() );
     delete (yyvsp[(4) - (4)].s);
-;}
+}
     break;
 
   case 330:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2732 "Grammar.ypp"
-    { (yyval.argList) = new ArgList; ;}
+    { (yyval.argList) = new ArgList; }
     break;
 
   case 331:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2733 "Grammar.ypp"
-    { (yyval.argList) = new ArgList; ;}
+    { (yyval.argList) = new ArgList; }
     break;
 
   case 332:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2734 "Grammar.ypp"
     {
     (yyval.argList) = new ArgList;
     (yyval.argList)->push_back((yyvsp[(1) - (1)].argument));
-    ;}
+    }
     break;
 
   case 333:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2738 "Grammar.ypp"
     {
     (yyval.argList) = (yyvsp[(1) - (3)].argList);
     (yyval.argList)->push_back((yyvsp[(3) - (3)].argument));
-    ;}
+    }
     break;
 
   case 334:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2746 "Grammar.ypp"
     {
     LOGD("CUDAShader %s...\n", (yyvsp[(2) - (7)].global_varname_annots).varName ? (yyvsp[(2) - (7)].global_varname_annots).varName->c_str() : "Un-named" );
@@ -7218,12 +7015,11 @@ yyreduce:
     delete (yyvsp[(2) - (7)].global_varname_annots).varName;
     delete (yyvsp[(4) - (7)].argList);
     delete (yyvsp[(7) - (7)].s);
-;}
+}
     break;
 
   case 335:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2806 "Grammar.ypp"
     {
     LOGD("CUDAShader %s...\n", (yyvsp[(2) - (4)].global_varname_annots).varName ? (yyvsp[(2) - (4)].global_varname_annots).varName->c_str() : "Un-named" );
@@ -7262,12 +7058,11 @@ yyreduce:
 #endif
     delete (yyvsp[(2) - (4)].global_varname_annots).varName;
     delete (yyvsp[(4) - (4)].s);
-;}
+}
     break;
 
   case 337:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2848 "Grammar.ypp"
     {
     assert(curResource);
@@ -7277,87 +7072,77 @@ yyreduce:
         yyerror("Error: sampler-state referenced not found. Did you declare it before the texture using it ?\n");
     curResource->setSamplerState(pState);
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 338:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2876 "Grammar.ypp"
     { 
     yyerror("Error in texture params declaration\n"); 
-;}
+}
     break;
 
   case 339:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2883 "Grammar.ypp"
-    { (yyval.resourceType)=nvFX::RESOURCE_UNKNOWN; ;}
+    { (yyval.resourceType)=nvFX::RESOURCE_UNKNOWN; }
     break;
 
   case 340:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2884 "Grammar.ypp"
-    { (yyval.resourceType)=nvFX::RESTEX_1D; ;}
+    { (yyval.resourceType)=nvFX::RESTEX_1D; }
     break;
 
   case 341:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2885 "Grammar.ypp"
-    { (yyval.resourceType)=nvFX::RESTEX_2D; ;}
+    { (yyval.resourceType)=nvFX::RESTEX_2D; }
     break;
 
   case 342:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2886 "Grammar.ypp"
-    { (yyval.resourceType)=nvFX::RESTEX_3D; ;}
+    { (yyval.resourceType)=nvFX::RESTEX_3D; }
     break;
 
   case 343:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2887 "Grammar.ypp"
-    { (yyval.resourceType)=nvFX::RESTEX_2DRECT; ;}
+    { (yyval.resourceType)=nvFX::RESTEX_2DRECT; }
     break;
 
   case 344:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2888 "Grammar.ypp"
-    { (yyval.resourceType)=nvFX::RESTEX_CUBE_MAP; ;}
+    { (yyval.resourceType)=nvFX::RESTEX_CUBE_MAP; }
     break;
 
   case 345:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2890 "Grammar.ypp"
     {
     curResource = curContainer->createResource((yyvsp[(2) - (3)].s)->c_str(), (yyvsp[(1) - (3)].resourceType), true/*ADD AS nvFX token*/)->getExInterface();
     curResource->setGLTexture(0); // this will tell the resource it is made of some external resource (reference to an existing texture)
     lex_pop_state();
     delete (yyvsp[(2) - (3)].s);
-    ;}
+    }
     break;
 
   case 346:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2896 "Grammar.ypp"
     {
     curResource = curContainer->createResource((yyvsp[(2) - (2)].s)->c_str(), (yyvsp[(1) - (2)].resourceType), true/*ADD AS nvFX token*/)->getExInterface();
     curResource->setGLTexture(0); // this will tell the resource it is made of some external resource (reference to an existing texture)
     curAnnotations = curResource->annotations()->getExInterface();
     delete (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 347:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2901 "Grammar.ypp"
     { 
     // for the case of items within a namespace :
@@ -7365,12 +7150,11 @@ yyreduce:
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
     curAnnotations = NULL;
     lex_pop_state(); lex_pop_state(); 
-;}
+}
     break;
 
   case 349:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2913 "Grammar.ypp"
     {
     if(curResource) {
@@ -7381,87 +7165,79 @@ yyreduce:
         curResource->setSamplerState(pState);
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 350:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2923 "Grammar.ypp"
     {
     if(curResource)
         if(!curResource->annotations()->getExInterface()->addAnnotation((yyvsp[(2) - (5)].s)->c_str(), (yyvsp[(4) - (5)].s)->c_str()))
             yyerror("err\n");
     delete (yyvsp[(4) - (5)].s);
-    ;}
+    }
     break;
 
   case 351:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2929 "Grammar.ypp"
     {
     if(curResource)
         curResource->setMSAAApplicationDependent();
-;}
+}
     break;
 
   case 352:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2933 "Grammar.ypp"
     {
     if(curResource)
         curResource->setMSAA((*(yyvsp[(5) - (7)].intList))[0], (yyvsp[(5) - (7)].intList)->size() > 1 ? (*(yyvsp[(5) - (7)].intList))[1] : 0);
     delete (yyvsp[(5) - (7)].intList);
-;}
+}
     break;
 
   case 353:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2938 "Grammar.ypp"
     {
     if(curResource)
         curResource->setMSAA((yyvsp[(4) - (5)].ival));
-;}
+}
     break;
 
   case 354:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2942 "Grammar.ypp"
     {
     if(curResource)
         curResource->setDimensionsApplicationDependent();
-;}
+}
     break;
 
   case 355:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2946 "Grammar.ypp"
     {
     int d = (int)(yyvsp[(5) - (7)].intList)->size();
     if(curResource)
         curResource->setDimensions((*(yyvsp[(5) - (7)].intList))[0], d > 1 ? (*(yyvsp[(5) - (7)].intList))[1] : 1, d > 2 ? (*(yyvsp[(5) - (7)].intList))[2] : 1);
     delete (yyvsp[(5) - (7)].intList);
-;}
+}
     break;
 
   case 356:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2952 "Grammar.ypp"
     {
     if(curResource)
         curResource->setDimensionFactor((yyvsp[(4) - (5)].fval), (yyvsp[(4) - (5)].fval));
-;}
+}
     break;
 
   case 357:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2956 "Grammar.ypp"
     {
     if(curResource) {
@@ -7475,12 +7251,11 @@ yyreduce:
         }
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 358:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2969 "Grammar.ypp"
     {
     if(curResource) {
@@ -7489,12 +7264,11 @@ yyreduce:
             yyerror("Error: Bad format\n");
         }
     }
-;}
+}
     break;
 
   case 359:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2981 "Grammar.ypp"
     {
     curResource = curContainer->createResource((yyvsp[(2) - (3)].s)->c_str(), RESTEX_2D, (yyvsp[(3) - (3)].bval))->getExInterface();
@@ -7503,33 +7277,30 @@ yyreduce:
     else
         curAnnotations = curResource->annotations()->getExInterface();
     delete (yyvsp[(2) - (3)].s);
-;}
+}
     break;
 
   case 360:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2988 "Grammar.ypp"
     {
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-;}
+}
     break;
 
   case 361:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2992 "Grammar.ypp"
     { 
     curAnnotations = NULL;
     lex_pop_state(); lex_pop_state(); 
-;}
+}
     break;
 
   case 362:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 2996 "Grammar.ypp"
     {
     curResource = curContainer->createResource((yyvsp[(2) - (3)].s)->c_str(), RESTEX_2DRECT, (yyvsp[(3) - (3)].bval))->getExInterface();
@@ -7538,33 +7309,30 @@ yyreduce:
     else
         curAnnotations = curResource->annotations()->getExInterface();
     delete (yyvsp[(2) - (3)].s);
-;}
+}
     break;
 
   case 363:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3003 "Grammar.ypp"
     {
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-;}
+}
     break;
 
   case 364:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3007 "Grammar.ypp"
     { 
     curAnnotations = NULL;
     lex_pop_state(); lex_pop_state(); 
-;}
+}
     break;
 
   case 365:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3011 "Grammar.ypp"
     {
     curResource = curContainer->createResource((yyvsp[(2) - (3)].s)->c_str(), RESRBUF_2D, (yyvsp[(3) - (3)].bval))->getExInterface();
@@ -7573,45 +7341,41 @@ yyreduce:
     else
         curAnnotations = curResource->annotations()->getExInterface();
     delete (yyvsp[(2) - (3)].s);
-;}
+}
     break;
 
   case 366:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3018 "Grammar.ypp"
     {
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-;}
+}
     break;
 
   case 367:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3022 "Grammar.ypp"
     { 
     curAnnotations = NULL;
     lex_pop_state(); lex_pop_state(); 
-;}
+}
     break;
 
   case 369:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3031 "Grammar.ypp"
     {
     if(curFBO)
       if(!curFBO->annotations()->getExInterface()->addAnnotation((yyvsp[(2) - (5)].s)->c_str(), (yyvsp[(4) - (5)].s)->c_str()))
         yyerror("err\n");
     delete (yyvsp[(4) - (5)].s);
-    ;}
+    }
     break;
 
   case 370:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3040 "Grammar.ypp"
     {
     if(curFBO)
@@ -7626,12 +7390,11 @@ yyreduce:
         }
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 371:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3054 "Grammar.ypp"
     { /*liststart VARNAME ',' VARNAME ',' VARNAME ',' VARNAME listend ';' { */
     if(curFBO) {
@@ -7653,12 +7416,11 @@ yyreduce:
         }
     }
     delete (yyvsp[(5) - (7)].varNameList);
-;}
+}
     break;
 
   case 372:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3075 "Grammar.ypp"
     {
     if(curFBO) {
@@ -7672,12 +7434,11 @@ yyreduce:
         }
     }
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 373:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3092 "Grammar.ypp"
     {
     curFBO = curContainer->createFBO((yyvsp[(2) - (3)].s)->c_str(), (yyvsp[(3) - (3)].bval))->getExInterface();
@@ -7686,346 +7447,303 @@ yyreduce:
     else
         curAnnotations = curFBO->annotations()->getExInterface();
     delete (yyvsp[(2) - (3)].s);
-;}
+}
     break;
 
   case 374:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3099 "Grammar.ypp"
     {
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-;}
+}
     break;
 
   case 375:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3103 "Grammar.ypp"
     { 
     curAnnotations = NULL;
     lex_pop_state(); lex_pop_state(); // fbo and then fbo1 state
-;}
+}
     break;
 
   case 382:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3118 "Grammar.ypp"
-    { yyerror("Error in Sampler State filtering\n");;}
+    { yyerror("Error in Sampler State filtering\n");}
     break;
 
   case 387:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3125 "Grammar.ypp"
-    { yyerror("Error in Sampler State UV Addressing\n");;}
+    { yyerror("Error in Sampler State UV Addressing\n");}
     break;
 
   case 389:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3133 "Grammar.ypp"
     {
     curSamplerState->getExInterface()->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)));
-;}
+}
     break;
 
   case 390:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3136 "Grammar.ypp"
     {
     curSamplerState->getExInterface()->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)));
-;}
+}
     break;
 
   case 391:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3139 "Grammar.ypp"
     {
     curSamplerState->getExInterface()->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)));
-;}
+}
     break;
 
   case 392:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3142 "Grammar.ypp"
     {
     curSamplerState->getExInterface()->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)));
-;}
+}
     break;
 
   case 393:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3145 "Grammar.ypp"
     {
     curSamplerState->getExInterface()->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)));
-;}
+}
     break;
 
   case 394:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3148 "Grammar.ypp"
-    { yyerror("Error in one of sampler-state states\n"); ;}
+    { yyerror("Error in one of sampler-state states\n"); }
     break;
 
   case 395:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3153 "Grammar.ypp"
     {
     LOGD("Sampler-state %s\n", (yyvsp[(2) - (2)].s)->c_str() );
     curSamplerState = curContainer->createSamplerState((yyvsp[(2) - (2)].s)->c_str())->getExInterface();
     curAnnotations = curSamplerState->annotations()->getExInterface();
     delete (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 396:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3158 "Grammar.ypp"
     { 
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-    lex_pop_state(); curAnnotations = NULL;;}
+    lex_pop_state(); curAnnotations = NULL;}
     break;
 
   case 397:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3163 "Grammar.ypp"
     { 
     yyerror("Error sampler-state declaration\n"); 
-;}
+}
     break;
 
   case 398:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3178 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), ((yyvsp[(3) - (4)].fval)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), ((yyvsp[(3) - (4)].fval)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 399:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3179 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 400:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3180 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 401:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3181 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 402:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3182 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 403:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3183 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), ((yyvsp[(3) - (4)].fval)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), ((yyvsp[(3) - (4)].fval)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 404:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3184 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)(((yyvsp[(3) - (4)].bval) )? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 405:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3186 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 406:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3187 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 407:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3188 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 408:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3189 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 409:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3190 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 410:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3191 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 411:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3192 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 412:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3193 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 413:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3194 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (8)].glenum)), getGLEnumValue((yyvsp[(4) - (8)].glenum)), getGLEnumValue((yyvsp[(6) - (8)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (8)].glenum)), getGLEnumValue((yyvsp[(4) - (8)].glenum)), getGLEnumValue((yyvsp[(6) - (8)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 414:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3195 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (yyvsp[(3) - (4)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (yyvsp[(3) - (4)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 415:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3196 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (yyvsp[(3) - (4)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (yyvsp[(3) - (4)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 416:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3197 "Grammar.ypp"
     {
     check_curRState();
     if(!curRState->createState(getGLEnumValue(GLPOLYGONOFFSETFACTOR), (yyvsp[(4) - (8)].fval))) yyerror("Failed to create state!\n");
     if(!curRState->createState(getGLEnumValue(GLPOLYGONOFFSETUNITS), (yyvsp[(6) - (8)].fval))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 417:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3202 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 418:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3203 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 419:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3204 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 420:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3206 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 421:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3207 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 422:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3208 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 423:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3209 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (yyvsp[(3) - (4)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (yyvsp[(3) - (4)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 424:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3210 "Grammar.ypp"
     {
     check_curCSState();
     if(!curCSState->createState(getGLEnumValue(GLALPHATESTFUNC), getGLEnumValue((yyvsp[(4) - (8)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLALPHATESTREF), (yyvsp[(6) - (8)].fval))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 425:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3215 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 426:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3216 "Grammar.ypp"
     {
     check_curCSState();
     if(!curCSState->createState(getGLEnumValue(GLBLENDSRC), getGLEnumValue((yyvsp[(4) - (8)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLBLENDDST), getGLEnumValue((yyvsp[(6) - (8)].glenum)))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 427:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3221 "Grammar.ypp"
     {
     check_curCSState();
@@ -8033,287 +7751,250 @@ yyreduce:
     if(!curCSState->createState(getGLEnumValue(GLBLENDDSTRGB), getGLEnumValue((yyvsp[(6) - (12)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLBLENDSRCALPHA), getGLEnumValue((yyvsp[(8) - (12)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLBLENDDSTALPHA), getGLEnumValue((yyvsp[(10) - (12)].glenum)))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 428:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3228 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 429:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3229 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 430:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3230 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 431:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3231 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 432:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3232 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 433:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3233 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 434:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3235 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 435:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3236 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 436:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3237 "Grammar.ypp"
     {
     check_curCSState();
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONRGB), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONALPHA), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 437:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3242 "Grammar.ypp"
     {
     check_curCSState();
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONRGB), getGLEnumValue((yyvsp[(4) - (8)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONALPHA), getGLEnumValue((yyvsp[(6) - (8)].glenum)))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 438:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3252 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (12)].glenum)), (yyvsp[(4) - (12)].fval), (yyvsp[(6) - (12)].fval), (yyvsp[(8) - (12)].fval), (yyvsp[(10) - (12)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (12)].glenum)), (yyvsp[(4) - (12)].fval), (yyvsp[(6) - (12)].fval), (yyvsp[(8) - (12)].fval), (yyvsp[(10) - (12)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 439:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3253 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 440:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3254 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 441:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3255 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 442:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3256 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 443:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3258 "Grammar.ypp"
     { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (12)].glenum)), 
     (GLboolean)((yyvsp[(4) - (12)].bval) ? GL_TRUE: GL_FALSE),
     (GLboolean)((yyvsp[(6) - (12)].bval) ? GL_TRUE: GL_FALSE),
     (GLboolean)((yyvsp[(8) - (12)].bval) ? GL_TRUE: GL_FALSE),
     (GLboolean)((yyvsp[(10) - (12)].bval) ? GL_TRUE: GL_FALSE)
-    )) yyerror("Failed to create state!\n"); ;}
+    )) yyerror("Failed to create state!\n"); }
     break;
 
   case 444:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3264 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 445:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3265 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 446:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3267 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 447:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3268 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 448:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3269 "Grammar.ypp"
-    { check_curDSTState();if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState();if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 449:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3270 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 450:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3271 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 451:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3272 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 452:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3273 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 453:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3275 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (8)].glenum)), (yyvsp[(4) - (8)].fval), (yyvsp[(6) - (8)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (8)].glenum)), (yyvsp[(4) - (8)].fval), (yyvsp[(6) - (8)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 454:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3276 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (GLenum)((yyvsp[(3) - (4)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 455:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3277 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 456:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3278 "Grammar.ypp"
     { 
     check_curDSTState();
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (10)].glenum)), getGLEnumValue((yyvsp[(4) - (10)].glenum)))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue(GLSTENCILREF), (unsigned int)(yyvsp[(6) - (10)].ival))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue(GLSTENCILVALUEMASK), (unsigned int)(yyvsp[(8) - (10)].ival))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 457:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3284 "Grammar.ypp"
     { 
     check_curDSTState();
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(4) - (12)].glenum) == GLFRONT ? GLSTENCILFUNC : GLSTENCILBACKFUNC), getGLEnumValue((yyvsp[(6) - (12)].glenum)))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(4) - (12)].glenum) == GLFRONT ? GLSTENCILREF : GLSTENCILBACKREF), (unsigned int)(yyvsp[(8) - (12)].ival))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(4) - (12)].glenum) == GLFRONT ? GLSTENCILVALUEMASK : GLSTENCILBACKVALUEMASK), (unsigned int)(yyvsp[(10) - (12)].ival))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 458:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3290 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 459:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3291 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 460:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3292 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 461:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3293 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 462:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3294 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 463:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3295 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 464:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3296 "Grammar.ypp"
     {
     // a concatenated version of GLSTENCILPASSDEPTHFAIL+GLSTENCILPASSDEPTHPASS+GLSTENCILWRITEMASK == GL function arguments
@@ -8321,1077 +8002,943 @@ yyreduce:
     if(!curDSTState->createState(getGLEnumValue(GLSTENCILFAIL), getGLEnumValue((yyvsp[(4) - (10)].glenum)))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue(GLSTENCILPASSDEPTHFAIL), getGLEnumValue((yyvsp[(6) - (10)].glenum)))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue(GLSTENCILPASSDEPTHPASS), getGLEnumValue((yyvsp[(8) - (10)].glenum)))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 465:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3303 "Grammar.ypp"
     { 
     check_curDSTState();
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(4) - (12)].glenum) == GLFRONT ? GLSTENCILFAIL : GLSTENCILBACKFAIL), getGLEnumValue((yyvsp[(6) - (12)].glenum)))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(4) - (12)].glenum) == GLFRONT ? GLSTENCILPASSDEPTHFAIL : GLSTENCILBACKPASSDEPTHFAIL), (unsigned int)(yyvsp[(8) - (12)].glenum))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(4) - (12)].glenum) == GLFRONT ? GLSTENCILPASSDEPTHPASS : GLSTENCILBACKPASSDEPTHPASS), (unsigned int)(yyvsp[(10) - (12)].glenum))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 466:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3316 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 467:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3317 "Grammar.ypp"
     { 
     check_curDSTState();
     if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (10)].glenum)), getGLEnumValue((yyvsp[(4) - (10)].glenum)))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue(GLSTENCILBACKREF), (unsigned int)(yyvsp[(6) - (10)].ival))) yyerror("Failed to create state!\n");
     if(!curDSTState->createState(getGLEnumValue(GLSTENCILBACKVALUEMASK), (unsigned int)(yyvsp[(8) - (10)].ival))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 468:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3323 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 469:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3324 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 470:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3325 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 471:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3326 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 472:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3327 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 473:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3328 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(1) - (4)].glenum)), (unsigned int)(yyvsp[(3) - (4)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 475:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3335 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 476:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3336 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 477:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3337 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 478:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3338 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 479:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3339 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 480:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3340 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 481:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3341 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 482:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3343 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 483:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3344 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 484:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3345 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 485:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3346 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 486:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3347 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 487:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3348 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 488:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3349 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 489:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3350 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 490:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3351 "Grammar.ypp"
-    { if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (9)].glenum)), getGLEnumValue((yyvsp[(5) - (9)].glenum)), getGLEnumValue((yyvsp[(7) - (9)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (9)].glenum)), getGLEnumValue((yyvsp[(5) - (9)].glenum)), getGLEnumValue((yyvsp[(7) - (9)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 491:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3352 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 492:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3353 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 493:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3354 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 494:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3355 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 495:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3356 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 496:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3358 "Grammar.ypp"
-    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curRState(); if(!curRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 497:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3359 "Grammar.ypp"
-    { yyerror("Error in Rasterizer-state list\n"); ;}
+    { yyerror("Error in Rasterizer-state list\n"); }
     break;
 
   case 498:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3364 "Grammar.ypp"
     {
     LOGD("Rasterization state %s\n", (yyvsp[(2) - (2)].s)->c_str() );
     curRState = curContainer->createStateGroup_Raster((yyvsp[(2) - (2)].s)->c_str())->getExInterface();
     curAnnotations = curRState->annotations()->getExInterface();
     delete (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 499:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3369 "Grammar.ypp"
     { 
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-    curAnnotations = NULL; curRState = NULL; lex_pop_state(); ;}
+    curAnnotations = NULL; curRState = NULL; lex_pop_state(); }
     break;
 
   case 500:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3374 "Grammar.ypp"
-    { yyerror("Error in Rasterizer-state declaration\n"); ;}
+    { yyerror("Error in Rasterizer-state declaration\n"); }
     break;
 
   case 502:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3380 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 503:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3381 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 504:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3382 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 505:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3383 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 506:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3384 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 507:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3385 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 508:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3386 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 509:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3387 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 510:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3388 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 511:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3389 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 512:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3391 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 513:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3392 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 514:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3393 "Grammar.ypp"
     {
     check_curCSState();
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONRGB), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONALPHA), getGLEnumValue((yyvsp[(3) - (4)].glenum)))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 515:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3398 "Grammar.ypp"
     {
     check_curCSState();
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONRGB), getGLEnumValue((yyvsp[(4) - (8)].glenum)))) yyerror("Failed to create state!\n");
     if(!curCSState->createState(getGLEnumValue(GLBLENDEQUATIONALPHA), getGLEnumValue((yyvsp[(6) - (8)].glenum)))) yyerror("Failed to create state!\n");
-;}
+}
     break;
 
   case 516:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3408 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (13)].glenum)), (yyvsp[(5) - (13)].fval), (yyvsp[(7) - (13)].fval), (yyvsp[(9) - (13)].fval), (yyvsp[(11) - (13)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (13)].glenum)), (yyvsp[(5) - (13)].fval), (yyvsp[(7) - (13)].fval), (yyvsp[(9) - (13)].fval), (yyvsp[(11) - (13)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 517:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3409 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 518:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3410 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 519:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3411 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 520:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3412 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 521:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3414 "Grammar.ypp"
     { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (13)].glenum)), 
     (GLboolean)((yyvsp[(5) - (13)].bval) ? GL_TRUE: GL_FALSE),
     (GLboolean)((yyvsp[(7) - (13)].bval) ? GL_TRUE: GL_FALSE),
     (GLboolean)((yyvsp[(9) - (13)].bval) ? GL_TRUE: GL_FALSE),
     (GLboolean)((yyvsp[(11) - (13)].bval) ? GL_TRUE: GL_FALSE)
-    )) yyerror("Failed to create state!\n"); ;}
+    )) yyerror("Failed to create state!\n"); }
     break;
 
   case 522:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3420 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 523:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3421 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 524:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3423 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 525:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3424 "Grammar.ypp"
-    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curCSState(); if(!curCSState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 526:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3425 "Grammar.ypp"
-    { yyerror("Error in Color sample state list\n"); ;}
+    { yyerror("Error in Color sample state list\n"); }
     break;
 
   case 527:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3430 "Grammar.ypp"
     {
     LOGD("Color sample state %s\n", (yyvsp[(2) - (2)].s)->c_str() );
     curCSState = curContainer->createStateGroup_CS((yyvsp[(2) - (2)].s)->c_str())->getExInterface();
     curAnnotations = curCSState->annotations()->getExInterface();
     delete (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 528:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3435 "Grammar.ypp"
     { 
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-    curAnnotations = NULL; curCSState = NULL; lex_pop_state(); ;}
+    curAnnotations = NULL; curCSState = NULL; lex_pop_state(); }
     break;
 
   case 529:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3440 "Grammar.ypp"
-    { yyerror("Error in color sampler state declaration\n"); ;}
+    { yyerror("Error in color sampler state declaration\n"); }
     break;
 
   case 531:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3446 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 532:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3447 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 533:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3448 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 534:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3449 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 535:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3450 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 536:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3452 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (9)].glenum)), (yyvsp[(5) - (9)].fval), (yyvsp[(7) - (9)].fval))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (9)].glenum)), (yyvsp[(5) - (9)].fval), (yyvsp[(7) - (9)].fval))) yyerror("Failed to create state!\n"); }
     break;
 
   case 537:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3453 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (GLenum)((yyvsp[(4) - (5)].bval) ? GL_TRUE: GL_FALSE))) yyerror("Failed to create state!\n"); }
     break;
 
   case 538:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3454 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 539:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3455 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 540:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3456 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 541:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3457 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 542:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3458 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 543:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3459 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 544:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3460 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 545:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3468 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 546:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3469 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 547:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3470 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 548:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3471 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 549:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3472 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 550:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3473 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n"); }
     break;
 
   case 551:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3474 "Grammar.ypp"
-    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); ;}
+    { check_curDSTState(); if(!curDSTState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (unsigned int)(yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n"); }
     break;
 
   case 552:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3475 "Grammar.ypp"
-    { yyerror("Error in Depth Stencil state list\n"); ;}
+    { yyerror("Error in Depth Stencil state list\n"); }
     break;
 
   case 553:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3480 "Grammar.ypp"
     {
     LOGD("Depth-Stencil state %s\n", (yyvsp[(2) - (2)].s)->c_str() );
     curDSTState = curContainer->createStateGroup_DST((yyvsp[(2) - (2)].s)->c_str())->getExInterface();
     curAnnotations = curDSTState->annotations()->getExInterface();
     delete (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 554:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3485 "Grammar.ypp"
     { 
     // for the case of items within a namespace :
     // copy the name-space annotations to this one
     if(curAnnotations) curAnnotations->copy(namespaceAnnotations);
-    curAnnotations = NULL; curDSTState = NULL; lex_pop_state(); ;}
+    curAnnotations = NULL; curDSTState = NULL; lex_pop_state(); }
     break;
 
   case 555:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3490 "Grammar.ypp"
-    { yyerror("Error in DST-state declaration\n"); ;}
+    { yyerror("Error in DST-state declaration\n"); }
     break;
 
   case 556:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3493 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 557:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3494 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 558:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3495 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 559:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3496 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 560:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3497 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 561:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3498 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 562:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3499 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 563:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3500 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 564:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3501 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 565:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3502 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 566:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3503 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 567:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3504 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 568:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3505 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 569:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3506 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 570:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3507 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 571:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3508 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 572:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3509 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 573:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3510 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 574:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3511 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 575:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3512 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 576:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3513 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 577:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3514 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 579:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3523 "Grammar.ypp"
-    { LOGI("TODO"); ;}
+    { LOGI("TODO"); }
     break;
 
   case 580:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3524 "Grammar.ypp"
     { 
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 581:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3529 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 582:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3534 "Grammar.ypp"
     {
 #ifndef OGLES2
     LOGI("TODO");
 #endif
-;}
+}
     break;
 
   case 583:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3539 "Grammar.ypp"
     {
 #ifndef OGLES2
     LOGI("TODO");
 #endif
-;}
+}
     break;
 
   case 584:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3544 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 585:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3549 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 586:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3554 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 587:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3559 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 588:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3564 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 589:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3569 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 590:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3574 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 591:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3579 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 592:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3584 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 593:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3589 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 594:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3594 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].fval))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 595:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3599 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 596:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3604 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), (yyvsp[(4) - (5)].ival))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 597:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3609 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 598:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3614 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 599:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3619 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 600:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3624 "Grammar.ypp"
     {
 #ifndef OGLES2
     check_curPRState(); if(!curPRState->createState(getGLEnumValue((yyvsp[(2) - (5)].glenum)), getGLEnumValue((yyvsp[(4) - (5)].glenum)))) yyerror("Failed to create state!\n");
 #endif
-;}
+}
     break;
 
   case 601:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3635 "Grammar.ypp"
-    { yyerror("Error in Path-Rendering state list\n"); ;}
+    { yyerror("Error in Path-Rendering state list\n"); }
     break;
 
   case 602:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3641 "Grammar.ypp"
     {
 #ifndef OGLES2
@@ -9400,12 +8947,11 @@ yyreduce:
     curAnnotations = curPRState->annotations()->getExInterface();
 #endif
     delete (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 603:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3648 "Grammar.ypp"
     {
 #ifndef OGLES2
@@ -9415,19 +8961,17 @@ yyreduce:
     curAnnotations = NULL;
     curPRState = NULL;
 #endif
-    lex_pop_state(); ;}
+    lex_pop_state(); }
     break;
 
   case 604:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3657 "Grammar.ypp"
-    { yyerror("Error in DST-state declaration\n"); ;}
+    { yyerror("Error in DST-state declaration\n"); }
     break;
 
   case 606:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3668 "Grammar.ypp"
     {
     if(!curAnnotations)
@@ -9435,55 +8979,50 @@ yyreduce:
     if(!curAnnotations->addAnnotation((yyvsp[(2) - (5)].s)->c_str(), (yyvsp[(4) - (5)].s)->c_str()))
         yyerror("err\n");
     delete (yyvsp[(4) - (5)].s);
-    ;}
+    }
     break;
 
   case 607:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3675 "Grammar.ypp"
     {
     if(!curAnnotations)
         curAnnotations = IAnnotationEx::getAnnotationSingleton(2); // need a temporary place since nothing was initialized
     else if(!curAnnotations->addAnnotation((yyvsp[(2) - (5)].s)->c_str(), (yyvsp[(4) - (5)].fval)))
         yyerror("err\n");
-    ;}
+    }
     break;
 
   case 608:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3681 "Grammar.ypp"
     {
     if(!curAnnotations)
         curAnnotations = IAnnotationEx::getAnnotationSingleton(2); // need a temporary place since nothing was initialized
     else if(!curAnnotations->addAnnotation((yyvsp[(2) - (5)].s)->c_str(), (yyvsp[(4) - (5)].ival)))
         yyerror("err\n");
-    ;}
+    }
     break;
 
   case 609:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3687 "Grammar.ypp"
     {
     if(!curAnnotations)
         curAnnotations = IAnnotationEx::getAnnotationSingleton(2); // need a temporary place since nothing was initialized
     else if(!curAnnotations->addAnnotation((yyvsp[(2) - (5)].s)->c_str(), (yyvsp[(4) - (5)].bval)))
         yyerror("err\n");
-    ;}
+    }
     break;
 
   case 610:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3699 "Grammar.ypp"
-    { yyerror("Error in annotation\n"); ;}
+    { yyerror("Error in annotation\n"); }
     break;
 
   case 614:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3710 "Grammar.ypp"
     {
         LOGD("value %f\n", (yyvsp[(2) - (2)].fval) );
@@ -9491,31 +9030,28 @@ yyreduce:
         pfl->push_back((yyvsp[(2) - (2)].fval));
         (yyval.floatVecList) = new FloatVecList;
         (yyval.floatVecList)->push_back(pfl);
-;}
+}
     break;
 
   case 615:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3720 "Grammar.ypp"
     {
     (yyval.floatVecList) = new FloatVecList;
     (yyval.floatVecList)->push_back((yyvsp[(3) - (4)].floatList));
-;}
+}
     break;
 
   case 616:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3727 "Grammar.ypp"
     {
     (yyval.floatVecList) = (yyvsp[(3) - (4)].floatVecList);
-;}
+}
     break;
 
   case 617:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3733 "Grammar.ypp"
     {
         LOGD("value %d\n", (yyvsp[(2) - (2)].ival) );
@@ -9523,21 +9059,19 @@ yyreduce:
         pfl->push_back((yyvsp[(2) - (2)].ival));
         (yyval.intVecList) = new IntVecList;
         (yyval.intVecList)->push_back(pfl);
-;}
+}
     break;
 
   case 618:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3740 "Grammar.ypp"
     {
       LOGI("Error in valueassignment_i\n");
-  ;}
+  }
     break;
 
   case 619:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3752 "Grammar.ypp"
     {
         LOGD("value %d\n", (yyvsp[(2) - (2)].bval) );
@@ -9545,87 +9079,78 @@ yyreduce:
         pfl->push_back((yyvsp[(2) - (2)].bval));
         (yyval.boolVecList) = new BoolVecList;
         (yyval.boolVecList)->push_back(pfl);
-;}
+}
     break;
 
   case 620:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3762 "Grammar.ypp"
     {
     (yyval.boolVecList) = new BoolVecList;
     (yyval.boolVecList)->push_back((yyvsp[(3) - (4)].boolList));
-;}
+}
     break;
 
   case 621:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3768 "Grammar.ypp"
-    { (yyval.precisionType)=IUniform::PHighP; ;}
+    { (yyval.precisionType)=IUniform::PHighP; }
     break;
 
   case 622:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3769 "Grammar.ypp"
-    { (yyval.precisionType)=IUniform::PMediumP; ;}
+    { (yyval.precisionType)=IUniform::PMediumP; }
     break;
 
   case 623:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3770 "Grammar.ypp"
-    { (yyval.precisionType)=IUniform::PLowP; ;}
+    { (yyval.precisionType)=IUniform::PLowP; }
     break;
 
   case 624:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3777 "Grammar.ypp"
     {
     (yyval.uniformQualifiers).hasUniformKeyword = true;
     (yyval.uniformQualifiers).global = false;
     (yyval.uniformQualifiers).precisionType = IUniform::PHighP;
-;}
+}
     break;
 
   case 625:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3782 "Grammar.ypp"
     {
     (yyval.uniformQualifiers).hasUniformKeyword = true;
     (yyval.uniformQualifiers).global = (yyvsp[(2) - (2)].bval);
     (yyval.uniformQualifiers).precisionType = IUniform::PHighP;
-;}
+}
     break;
 
   case 626:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3787 "Grammar.ypp"
     {
     (yyval.uniformQualifiers).hasUniformKeyword = true;
     (yyval.uniformQualifiers).global = false;
     (yyval.uniformQualifiers).precisionType = (yyvsp[(2) - (2)].precisionType);
-;}
+}
     break;
 
   case 627:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3792 "Grammar.ypp"
     {
     (yyval.uniformQualifiers).hasUniformKeyword = true;
     (yyval.uniformQualifiers).global = (yyvsp[(2) - (3)].bval);
     (yyval.uniformQualifiers).precisionType = (yyvsp[(3) - (3)].precisionType);
-;}
+}
     break;
 
   case 628:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3797 "Grammar.ypp"
     {
     (yyval.uniformQualifiers).hasUniformKeyword = false;
@@ -9635,283 +9160,256 @@ yyreduce:
 #else
     (yyval.uniformQualifiers).precisionType = IUniform::PHighP;
 #endif
-;}
+}
     break;
 
   case 629:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3806 "Grammar.ypp"
     {
     (yyval.uniformQualifiers).hasUniformKeyword = false;
     (yyval.uniformQualifiers).global = false;
     (yyval.uniformQualifiers).precisionType = (yyvsp[(1) - (1)].precisionType);
-;}
+}
     break;
 
   case 630:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3811 "Grammar.ypp"
     {
     (yyval.uniformQualifiers).hasUniformKeyword = false;
     (yyval.uniformQualifiers).global = (yyvsp[(1) - (2)].bval);
     (yyval.uniformQualifiers).precisionType = (yyvsp[(2) - (2)].precisionType);
-;}
+}
     break;
 
   case 631:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3822 "Grammar.ypp"
     { (yyval.valueList) = new ValueList; 
     memset((yyval.valueList), 0, sizeof(ValueList));
-    (yyval.valueList)->floatVecList = (yyvsp[(1) - (1)].floatVecList); ;}
+    (yyval.valueList)->floatVecList = (yyvsp[(1) - (1)].floatVecList); }
     break;
 
   case 632:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3825 "Grammar.ypp"
     { (yyval.valueList) = new ValueList; 
     memset((yyval.valueList), 0, sizeof(ValueList));
-    (yyval.valueList)->floatVecList = (yyvsp[(1) - (1)].floatVecList); ;}
+    (yyval.valueList)->floatVecList = (yyvsp[(1) - (1)].floatVecList); }
     break;
 
   case 633:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3828 "Grammar.ypp"
     { (yyval.valueList) = new ValueList; 
     memset((yyval.valueList), 0, sizeof(ValueList));
-    (yyval.valueList)->floatVecList = (yyvsp[(1) - (1)].floatVecList); ;}
+    (yyval.valueList)->floatVecList = (yyvsp[(1) - (1)].floatVecList); }
     break;
 
   case 634:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3831 "Grammar.ypp"
     { (yyval.valueList) = new ValueList; 
     memset((yyval.valueList), 0, sizeof(ValueList));
-    (yyval.valueList)->intVecList = (yyvsp[(1) - (1)].intVecList); ;}
+    (yyval.valueList)->intVecList = (yyvsp[(1) - (1)].intVecList); }
     break;
 
   case 635:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3837 "Grammar.ypp"
     { (yyval.valueList) = new ValueList; 
     memset((yyval.valueList), 0, sizeof(ValueList));
-    (yyval.valueList)->boolVecList = (yyvsp[(1) - (1)].boolVecList); ;}
+    (yyval.valueList)->boolVecList = (yyvsp[(1) - (1)].boolVecList); }
     break;
 
   case 636:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3840 "Grammar.ypp"
     { (yyval.valueList) = new ValueList; 
     memset((yyval.valueList), 0, sizeof(ValueList));
-    (yyval.valueList)->boolVecList = (yyvsp[(1) - (1)].boolVecList); ;}
+    (yyval.valueList)->boolVecList = (yyvsp[(1) - (1)].boolVecList); }
     break;
 
   case 637:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3843 "Grammar.ypp"
     { 
     (yyval.valueList) = NULL; yyerror("Error in value assignment\n"); 
-;}
+}
     break;
 
   case 638:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3849 "Grammar.ypp"
     {
     LOGD("semantic %s\n", (yyvsp[(2) - (2)].s)->c_str() );
     (yyval.s) = (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 639:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3856 "Grammar.ypp"
     { 
     (yyval.ival) = -1;
-;}
+}
     break;
 
   case 640:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3859 "Grammar.ypp"
     {
     (yyval.ival) = (yyvsp[(2) - (3)].ival);
-;}
+}
     break;
 
   case 641:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3870 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
-;}
+}
     break;
 
   case 642:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3874 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
-;}
+}
     break;
 
   case 643:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3878 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->valueList = (yyvsp[(1) - (1)].valueList);
-;}
+}
     break;
 
   case 644:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3883 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->valueList = (yyvsp[(2) - (2)].valueList);
-;}
+}
     break;
 
   case 645:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3888 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->semantic = (yyvsp[(1) - (1)].s);
-;}
+}
     break;
 
   case 646:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3893 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->semantic = (yyvsp[(1) - (2)].s);
-;}
+}
     break;
 
   case 647:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3898 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->semantic = (yyvsp[(1) - (2)].s);
     (yyval.saszsauva)->valueList = (yyvsp[(2) - (2)].valueList);
-;}
+}
     break;
 
   case 648:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3904 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->semantic = (yyvsp[(1) - (3)].s);
     (yyval.saszsauva)->valueList = (yyvsp[(3) - (3)].valueList);
-;}
+}
     break;
 
   case 649:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3910 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (1)].ival);
-;}
+}
     break;
 
   case 650:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3915 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (2)].ival);
-;}
+}
     break;
 
   case 651:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3920 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (2)].ival);
     (yyval.saszsauva)->valueList = (yyvsp[(2) - (2)].valueList);
-;}
+}
     break;
 
   case 652:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3926 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (3)].ival);
     (yyval.saszsauva)->valueList = (yyvsp[(3) - (3)].valueList);
-;}
+}
     break;
 
   case 653:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3932 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (2)].ival);
     (yyval.saszsauva)->semantic = (yyvsp[(2) - (2)].s);
-;}
+}
     break;
 
   case 654:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3938 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
     memset((yyval.saszsauva), 0, sizeof(SASzSAUva));
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (3)].ival);
     (yyval.saszsauva)->semantic = (yyvsp[(2) - (3)].s);
-;}
+}
     break;
 
   case 655:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3944 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
@@ -9919,12 +9417,11 @@ yyreduce:
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (3)].ival);
     (yyval.saszsauva)->semantic = (yyvsp[(2) - (3)].s);
     (yyval.saszsauva)->valueList = (yyvsp[(3) - (3)].valueList);
-;}
+}
     break;
 
   case 656:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3951 "Grammar.ypp"
     {
     (yyval.saszsauva) = new SASzSAUva;
@@ -9932,204 +9429,176 @@ yyreduce:
     (yyval.saszsauva)->arraySz = (yyvsp[(1) - (4)].ival);
     (yyval.saszsauva)->semantic = (yyvsp[(2) - (4)].s);
     (yyval.saszsauva)->valueList = (yyvsp[(4) - (4)].valueList);
-;}
+}
     break;
 
   case 657:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3963 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TFloat; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TFloat; }
     break;
 
   case 658:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3964 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TVec2; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TVec2; }
     break;
 
   case 659:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3965 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TVec3; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TVec3; }
     break;
 
   case 660:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3966 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TVec4; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TVec4; }
     break;
 
   case 661:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3967 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TInt; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TInt; }
     break;
 
   case 662:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3968 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TInt2; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TInt2; }
     break;
 
   case 663:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3969 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TInt3; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TInt3; }
     break;
 
   case 664:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3970 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TInt4; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TInt4; }
     break;
 
   case 665:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3971 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TBool; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TBool; }
     break;
 
   case 666:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3972 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TBool2; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TBool2; }
     break;
 
   case 667:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3973 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TBool3; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TBool3; }
     break;
 
   case 668:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3974 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TBool4; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TBool4; }
     break;
 
   case 669:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3975 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TMat2; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TMat2; }
     break;
 
   case 670:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3976 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TMat3; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TMat3; }
     break;
 
   case 671:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3977 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TMat4; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TMat4; }
     break;
 
   case 672:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3978 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture1D; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture1D; }
     break;
 
   case 673:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3979 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture2D; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture2D; }
     break;
 
   case 674:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3980 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture2DRect; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture2DRect; }
     break;
 
   case 675:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3981 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture3D; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture3D; }
     break;
 
   case 676:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3982 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTextureCube; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTextureCube; }
     break;
 
   case 677:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3983 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture1D; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture1D; }
     break;
 
   case 678:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3984 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture2D; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture2D; }
     break;
 
   case 679:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3985 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture2DRect; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture2DRect; }
     break;
 
   case 680:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3986 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTexture3D; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTexture3D; }
     break;
 
   case 681:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3987 "Grammar.ypp"
-    { (yyval.uniformType) = nvFX::IUniform::TTextureCube; ;}
+    { (yyval.uniformType) = nvFX::IUniform::TTextureCube; }
     break;
 
   case 682:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3988 "Grammar.ypp"
-    { yyerror("Error : unknown type\n"); ;}
+    { yyerror("Error : unknown type\n"); }
     break;
 
   case 683:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3994 "Grammar.ypp"
     {
         curAnnotations = IAnnotationEx::getAnnotationSingleton(); // need a temporary place
         curAnnotations->clear();
-    ;}
+    }
     break;
 
   case 684:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 3997 "Grammar.ypp"
     {
     SUniformQualifiers &q = (yyvsp[(1) - (6)].uniformQualifiers);
@@ -10208,12 +9677,11 @@ yyreduce:
     delete varName;
     curUniform = NULL;
     curAnnotations = NULL;
-  ;}
+  }
     break;
 
   case 706:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4117 "Grammar.ypp"
     {
     LOGD("Namespace %s\n", (yyvsp[(2) - (2)].s)->c_str() );
@@ -10223,24 +9691,22 @@ yyreduce:
     // keep the pointer here because the idea of namespace annotations is to copy them later
     // on every single item in the namespace
     namespaceAnnotations = curAnnotations;
-;}
+}
     break;
 
   case 707:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4125 "Grammar.ypp"
     { 
     namespaceName.clear(); 
     curAnnotations = NULL;
     namespaceAnnotations = NULL;
     delete (yyvsp[(2) - (7)].s);
-;}
+}
     break;
 
   case 711:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4143 "Grammar.ypp"
     {
     if((yyvsp[(2) - (2)].global_varname_annots).varName == NULL)
@@ -10273,41 +9739,37 @@ yyreduce:
     }
 
     delete (yyvsp[(2) - (2)].global_varname_annots).varName;
-;}
+}
     break;
 
   case 712:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4174 "Grammar.ypp"
     {
     curCstBuffer = NULL;
     curAnnotations = NULL;
     lex_pop_state();
-;}
+}
     break;
 
   case 713:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4185 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (6)].varNameList);
-    ;}
+    }
     break;
 
   case 714:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4188 "Grammar.ypp"
     {
     delete (yyvsp[(5) - (7)].varNameList);
-    ;}
+    }
     break;
 
   case 715:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4191 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (5)].s)
@@ -10315,8 +9777,7 @@ yyreduce:
     break;
 
   case 716:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4194 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (5)].s)
@@ -10324,8 +9785,7 @@ yyreduce:
     break;
 
   case 717:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4197 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (5)].s)
@@ -10333,8 +9793,7 @@ yyreduce:
     break;
 
   case 718:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4200 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (5)].s)
@@ -10342,16 +9801,14 @@ yyreduce:
     break;
 
   case 719:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4203 "Grammar.ypp"
     {
-;}
+}
     break;
 
   case 720:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4205 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (5)].s)
@@ -10359,8 +9816,7 @@ yyreduce:
     break;
 
   case 721:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4208 "Grammar.ypp"
     {
     // we prefer this loop : we don't have the char ** available here... using vector of std::string...
@@ -10368,23 +9824,21 @@ yyreduce:
     //    curXX->createState($4->c_str(), i, (*$8)[i].c_str());
     delete (yyvsp[(4) - (10)].s);
     delete (yyvsp[(8) - (10)].varNameList);
-    ;}
+    }
     break;
 
   case 722:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4215 "Grammar.ypp"
     {
     //curPass->createState($4->c_str(), 0, $7->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-    ;}
+    }
     break;
 
   case 723:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4220 "Grammar.ypp"
     {
     ValueList* pvalueList = (yyvsp[(6) - (7)].valueList);
@@ -10399,54 +9853,48 @@ yyreduce:
         delete pvalueList;
     }
     delete (yyvsp[(4) - (7)].s);
-    ;}
+    }
     break;
 
   case 724:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4236 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 725:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4237 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 726:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4238 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 728:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4247 "Grammar.ypp"
     {
     delete (yyvsp[(5) - (7)].varNameList);
-    ;}
+    }
     break;
 
   case 729:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4250 "Grammar.ypp"
     {
     delete (yyvsp[(5) - (7)].varNameList);
-    ;}
+    }
     break;
 
   case 730:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4253 "Grammar.ypp"
     {
     // we prefer this loop : we don't have the char ** available here... using vector of std::string...
@@ -10454,23 +9902,21 @@ yyreduce:
     //    curXX->createState($4->c_str(), i, (*$8)[i].c_str());
     delete (yyvsp[(4) - (10)].s);
     delete (yyvsp[(8) - (10)].varNameList);
-    ;}
+    }
     break;
 
   case 731:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4260 "Grammar.ypp"
     {
     //curPass->createState($4->c_str(), 0, $7->c_str());
     delete (yyvsp[(4) - (8)].s);
     delete (yyvsp[(7) - (8)].s);
-    ;}
+    }
     break;
 
   case 732:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4265 "Grammar.ypp"
     {
     ValueList* pvalueList = (yyvsp[(6) - (7)].valueList);
@@ -10485,36 +9931,32 @@ yyreduce:
         delete pvalueList;
     }
     delete (yyvsp[(4) - (7)].s);
-    ;}
+    }
     break;
 
   case 733:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4281 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 734:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4282 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 735:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4283 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 737:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4292 "Grammar.ypp"
     {
     //if(curResource) {
@@ -10523,104 +9965,104 @@ yyreduce:
     //        yyerror("Error: Bad format\n");
     //    }
     //}
-;}
+}
     break;
 
   case 738:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4300 "Grammar.ypp"
     {
     //if(curResource)
     //    curResource->setDimensionsApplicationDependent();
-;}
+}
     break;
 
   case 739:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4304 "Grammar.ypp"
     {
     int d = (int)(yyvsp[(5) - (7)].intList)->size();
     //if(curResource)
     //    curResource->setDimensions((*$5)[0], d > 1 ? (*$5)[1] : 1, d > 2 ? (*$5)[2] : 1);
     delete (yyvsp[(5) - (7)].intList);
-;}
+}
     break;
 
   case 740:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4312 "Grammar.ypp"
     {
     delete (yyvsp[(2) - (2)].s);
-   ;}
+   }
     break;
 
   case 741:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4314 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 742:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4315 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 744:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4324 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 745:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4327 "Grammar.ypp"
     {
     delete (yyvsp[(4) - (5)].s);
-;}
+}
     break;
 
   case 746:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4332 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 747:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4333 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
   case 748:
-
-/* Line 1455 of yacc.c  */
+/* Line 1787 of yacc.c  */
 #line 4334 "Grammar.ypp"
     {
-   ;}
+   }
     break;
 
 
-
-/* Line 1455 of yacc.c  */
-#line 10622 "C:/p4/GitHub/nvFX/FxParser/Grammar.cpp"
+/* Line 1787 of yacc.c  */
+#line 10053 "/Users/hkrn/src/MMDAI/nvFX-src/FxParser/Grammar.cpp"
       default: break;
     }
+  /* User semantic actions sometimes alter yychar, and that requires
+     that yytoken be updated with the new translation.  We take the
+     approach of translating immediately before every use of yytoken.
+     One alternative is translating here after every semantic action,
+     but that translation would be missed if the semantic action invokes
+     YYABORT, YYACCEPT, or YYERROR immediately after altering yychar or
+     if it invokes YYBACKUP.  In the case of YYABORT or YYACCEPT, an
+     incorrect destructor might then be invoked immediately.  In the
+     case of YYERROR or YYBACKUP, subsequent parser actions might lead
+     to an incorrect destructor call or verbose syntax error message
+     before the lookahead is translated.  */
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
 
   YYPOPSTACK (yylen);
@@ -10648,6 +10090,10 @@ yyreduce:
 | yyerrlab -- here on detecting error |
 `------------------------------------*/
 yyerrlab:
+  /* Make sure we have latest lookahead translation.  See comments at
+     user semantic actions for why this is necessary.  */
+  yytoken = yychar == YYEMPTY ? YYEMPTY : YYTRANSLATE (yychar);
+
   /* If not already recovering from an error, report this error.  */
   if (!yyerrstatus)
     {
@@ -10655,37 +10101,36 @@ yyerrlab:
 #if ! YYERROR_VERBOSE
       yyerror (YY_("syntax error"));
 #else
+# define YYSYNTAX_ERROR yysyntax_error (&yymsg_alloc, &yymsg, \
+                                        yyssp, yytoken)
       {
-	YYSIZE_T yysize = yysyntax_error (0, yystate, yychar);
-	if (yymsg_alloc < yysize && yymsg_alloc < YYSTACK_ALLOC_MAXIMUM)
-	  {
-	    YYSIZE_T yyalloc = 2 * yysize;
-	    if (! (yysize <= yyalloc && yyalloc <= YYSTACK_ALLOC_MAXIMUM))
-	      yyalloc = YYSTACK_ALLOC_MAXIMUM;
-	    if (yymsg != yymsgbuf)
-	      YYSTACK_FREE (yymsg);
-	    yymsg = (char *) YYSTACK_ALLOC (yyalloc);
-	    if (yymsg)
-	      yymsg_alloc = yyalloc;
-	    else
-	      {
-		yymsg = yymsgbuf;
-		yymsg_alloc = sizeof yymsgbuf;
-	      }
-	  }
-
-	if (0 < yysize && yysize <= yymsg_alloc)
-	  {
-	    (void) yysyntax_error (yymsg, yystate, yychar);
-	    yyerror (yymsg);
-	  }
-	else
-	  {
-	    yyerror (YY_("syntax error"));
-	    if (yysize != 0)
-	      goto yyexhaustedlab;
-	  }
+        char const *yymsgp = YY_("syntax error");
+        int yysyntax_error_status;
+        yysyntax_error_status = YYSYNTAX_ERROR;
+        if (yysyntax_error_status == 0)
+          yymsgp = yymsg;
+        else if (yysyntax_error_status == 1)
+          {
+            if (yymsg != yymsgbuf)
+              YYSTACK_FREE (yymsg);
+            yymsg = (char *) YYSTACK_ALLOC (yymsg_alloc);
+            if (!yymsg)
+              {
+                yymsg = yymsgbuf;
+                yymsg_alloc = sizeof yymsgbuf;
+                yysyntax_error_status = 2;
+              }
+            else
+              {
+                yysyntax_error_status = YYSYNTAX_ERROR;
+                yymsgp = yymsg;
+              }
+          }
+        yyerror (yymsgp);
+        if (yysyntax_error_status == 2)
+          goto yyexhaustedlab;
       }
+# undef YYSYNTAX_ERROR
 #endif
     }
 
@@ -10744,7 +10189,7 @@ yyerrlab1:
   for (;;)
     {
       yyn = yypact[yystate];
-      if (yyn != YYPACT_NINF)
+      if (!yypact_value_is_default (yyn))
 	{
 	  yyn += YYTERROR;
 	  if (0 <= yyn && yyn <= YYLAST && yycheck[yyn] == YYTERROR)
@@ -10767,7 +10212,9 @@ yyerrlab1:
       YY_STACK_PRINT (yyss, yyssp);
     }
 
+  YY_IGNORE_MAYBE_UNINITIALIZED_BEGIN
   *++yyvsp = yylval;
+  YY_IGNORE_MAYBE_UNINITIALIZED_END
 
 
   /* Shift the error token.  */
@@ -10791,7 +10238,7 @@ yyabortlab:
   yyresult = 1;
   goto yyreturn;
 
-#if !defined(yyoverflow) || YYERROR_VERBOSE
+#if !defined yyoverflow || YYERROR_VERBOSE
 /*-------------------------------------------------.
 | yyexhaustedlab -- memory exhaustion comes here.  |
 `-------------------------------------------------*/
@@ -10803,8 +10250,13 @@ yyexhaustedlab:
 
 yyreturn:
   if (yychar != YYEMPTY)
-     yydestruct ("Cleanup: discarding lookahead",
-		 yytoken, &yylval);
+    {
+      /* Make sure we have latest lookahead translation.  See comments at
+         user semantic actions for why this is necessary.  */
+      yytoken = YYTRANSLATE (yychar);
+      yydestruct ("Cleanup: discarding lookahead",
+                  yytoken, &yylval);
+    }
   /* Do not reclaim the symbols of the rule which action triggered
      this YYABORT or YYACCEPT.  */
   YYPOPSTACK (yylen);
@@ -10828,8 +10280,6 @@ yyreturn:
 }
 
 
-
-/* Line 1675 of yacc.c  */
+/* Line 2050 of yacc.c  */
 #line 4339 "Grammar.ypp"
-
 
